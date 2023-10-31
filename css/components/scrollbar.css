@@ -1,0 +1,25 @@
+* {
+  /* -- FIREFOX -- */
+  scrollbar-width: 10px;
+  scrollbar-color: #131313 #d6d6d6;
+}
+/* -- Chrome, Edge, and Safari -- */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 0 none #fff;
+  background-color: #131313;
+  transition: all 280ms ease-in-out;
+}
+::-webkit-scrollbar::hover {
+  background-color: #131313;
+}

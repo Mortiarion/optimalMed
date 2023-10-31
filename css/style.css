@@ -1,0 +1,106 @@
+@import url(./components/normalize.css);
+@import url(./components/header.css);
+@import url(./components/scrollbar.css);
+@import url(./components/media/media__header.css);
+@import url(./components/why.css);
+@import url(./components/media/media__why.css);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --text-color-all: #080808;
+    --title-color-second: #0FA4AE;
+    --subtitle-color: #555555;
+    --background-color: #ACE6EA;
+    --button-color: #461DBA;
+    --white-color: #ffffff;
+    --background-color-transparent: rgba(255, 255, 255, 0.90);
+    --main-fonts: 'Montserrat', sans-serif;
+    --second-fonts: 'Raleway', sans-serif;
+    --box-background: rgba(255, 255, 255, 0.60);
+
+
+}
+
+.wrapper {
+    display:  flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 17px 0 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+body {
+    font-family: var(--main-fonts);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
