@@ -57,7 +57,7 @@
     .why .container {
         max-width: 1400px;
         padding: 0 130px 0 130px;
-        margin: 0 0 120px 0;
+        margin: 0 auto 120px auto;
     }
     .why__wrapper {
         grid-row-gap: 130px;
