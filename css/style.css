@@ -4,6 +4,8 @@
 @import url(./components/media/media__header.css);
 @import url(./components/why.css);
 @import url(./components/media/media__why.css);
+@import url(./components/requierements.css);
+@import url(./components/media/media__requierements.css);
 
 * {
     box-sizing: border-box;

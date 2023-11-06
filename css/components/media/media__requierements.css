@@ -1,0 +1,38 @@
+@media (min-width: 1024px) {
+    .requierements__wrapper {
+        display: grid;
+        padding: 99px 32px 115px 34px;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
+        grid-column-gap: 39px;
+        grid-row-gap: 119px;
+        /* grid-column-gap: 41px; */
+        /* grid-row-gap: 49px; */
+        align-items: end;
+        background-image: url("./../../../img/doctor-men-1024.png");
+        background-size: 301px 324px;
+    }
+    .requierements .container {
+        padding: 0 20px 0 20px;
+    }
+    .requierements .btn {
+        margin: 0;
+        height: 70px;
+    }
+    .requierements__content {
+        margin: 0;
+    }
+    .requierements .title  {
+        margin: 0;
+        font-size: 38px;
+        line-height: 38px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .requierements__wrapper {
+        padding: 99px 211px 97px 110px;
+        grid-column-gap: 120px;
+        grid-row-gap: 131px;
+    }
+}
