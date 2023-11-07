@@ -11,6 +11,7 @@
         align-items: end;
         background-image: url("./../../../img/doctor-men-1024.png");
         background-size: 301px 324px;
+        margin: 0 0 60px 0;
     }
     .requierements .container {
         padding: 0 20px 0 20px;
@@ -34,5 +35,8 @@
         padding: 99px 211px 97px 110px;
         grid-column-gap: 120px;
         grid-row-gap: 131px;
+    }
+    .requierements .container {
+        max-width: 1400px;
     }
 }

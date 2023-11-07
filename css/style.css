@@ -6,6 +6,8 @@
 @import url(./components/media/media__why.css);
 @import url(./components/requierements.css);
 @import url(./components/media/media__requierements.css);
+@import url(./components/additional.css);
+@import url(./components/media/media__additional.css);
 
 * {
     box-sizing: border-box;
@@ -24,8 +26,6 @@
     --main-fonts: 'Montserrat', sans-serif;
     --second-fonts: 'Raleway', sans-serif;
     --box-background: rgba(255, 255, 255, 0.60);
-
-
 }
 
 .wrapper {
