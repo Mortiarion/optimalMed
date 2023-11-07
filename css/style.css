@@ -8,6 +8,8 @@
 @import url(./components/media/media__requierements.css);
 @import url(./components/additional.css);
 @import url(./components/media/media__additional.css);
+@import url(./components/cheme.css);
+@import url(./components/media/media__scheme.css);
 
 * {
     box-sizing: border-box;

@@ -1,0 +1,32 @@
+.scheme .title,
+.scheme .title span {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+}
+
+.scheme .title span {
+    color: var(--title-color-second);
+}
+
+.scheme__content {
+    display: flex;
+    margin: 0 0 30px 0;
+}
+
+.scheme .number {
+    color: var(--title-color-second);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.32px;
+    margin: 0 10px 0 0;
+}
+
+.scheme .text {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.32px;
+    text-align: left;
+    margin: 0;
+}

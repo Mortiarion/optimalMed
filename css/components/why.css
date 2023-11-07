@@ -1,13 +1,11 @@
-.why {
-}
-.container {
-}
 .why__content {
     margin: 0 0 80px 0;
 }
+
 .why__content .title {
     margin: 0 0 30px 0;
 }
+
 .why__content .title,
 .why__content .title span  {
     text-align: center;
@@ -15,15 +13,16 @@
     font-weight: 600;
     line-height: 30px; 
 }
+
 .why__content .title span {
     color: var(--title-color-second);
     display: inline-block;
 }
-.why__wrapper {
-}
+
 .why__wrapper-inner {
     margin: 0 0 24px 0;
 }
+
 .why .why__wrapper-inner .title {
     font-size: 16px;
     font-weight: 600;
@@ -32,6 +31,7 @@
     text-align: left;
     line-height: normal;
 }
+
 .why .why__wrapper-inner .text {
     color: var(--subtitle-color);
     font-family: var(--second-fonts);
@@ -39,20 +39,22 @@
     font-weight: 500;
     text-align: left;
 }
+
 .why .line {
     width: 80px;
     margin: 0 0 10px 0;
 }
-.text {
-}
+
 .badge {
     border: 1px solid; 
     padding: 0 15px 20px 30px;
     border-radius: 20px;
 }
+
 .badge__box {
     display: flex;
 }
+
 .why .badge__box .title {
     text-align: left;
     font-size: 22px;
