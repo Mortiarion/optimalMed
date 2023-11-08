@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <meta name="description" content="Вакансії для лікарів у Польщі. Приватні та державні лікарні, найбільший вибір робочих місць. Отримайте унікальну пропозицію початку роботи та план кар'єри на 5 років з нострифікацією диплома.">
     <meta name="keywords" content="лікарі, вакансії, Польща, нострифікація, медичні спеціалісти">
     <meta name="robots" content="index, follow">
@@ -181,7 +183,6 @@
                         <h2 class="title">
                             <span>Вимоги</span> до кандидатів
                         </h2>
-                        <!-- <div class="reguierements__inner"> -->
                             <div class="requierements__content">
                                 <div class="requierements__number">01/</div>
                                 <h4 class="requierements__title">
@@ -198,10 +199,6 @@
                                     Диплом про вищу медичну освіту та сертифікат 
                                     про проходження інтернатури
                                 </h4>
-                                <!-- <p class="subtitle">
-                                    за бажання буде можливість нострифікувати диплом 
-                                    уже в Польщі під час роботи.
-                                </p> -->
                             </div>
                             <div class="requierements__content">
                                 <div class="requierements__number">03/</div>
@@ -221,8 +218,6 @@
                                     (знання мови вітається)
                                 </p>
                             </div>
-                            
-                        <!-- </div> -->
                         <button class="btn">Подати заявку</button>
                     </div>
                 </div>
@@ -371,9 +366,10 @@
                             <span>Відгуки</span>
                             лікарів
                         </h4>
-                        <div class="testimonials__slider">
-                            <div class="slides">
-                                <div class="testimonials__slide prev">
+                        <div class="swiper">
+                        
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide--1">
                                     <div class="user">
                                         <img src="./img/user.png" alt="user">
                                         <div class="user__info">
@@ -385,19 +381,22 @@
                                         </div>
                                     </div>
                                     <div class="user__comments">
-                                        <p>Я хочу висловити щиру подяку команді нашого сайту 
-                                            з працевлаштування лікарів у Польщі. Завдяки їхньому 
-                                            професіоналізму та підтримці, я зміг успішно здійснити 
-                                            свою мрію про роботу в іншій країні.
+                                        <p>
+                                            Я хочу висловити щиру подяку команді нашого сайту з
+                                            працевлаштування лікарів у Польщі. Завдяки їхньому
+                                            професіоналізму та підтримці, я зміг успішно здійснити свою мрію
+                                            про роботу в іншій країні.
                                         </p>
-                                        <br>
-                                        <p> Рекомендую їхні послуги всім лікарям, 
-                                            які бажають знайти найкращі можливості в Польщі.
+                                        <br />
+                                        <p>
+                                            Рекомендую їхні послуги всім лікарям, які бажають знайти
+                                            найкращі можливості в Польщі.
                                         </p>
                                         <span>11 серпня 2022 р.</span>
                                     </div>
                                 </div>
-                                <div class="testimonials__slide main">
+
+                                <div class="swiper-slide swiper-slide--2">
                                     <div class="user">
                                         <img src="./img/user.png" alt="user">
                                         <div class="user__info">
@@ -409,19 +408,22 @@
                                         </div>
                                     </div>
                                     <div class="user__comments">
-                                        <p>Я хочу висловити щиру подяку команді нашого сайту 
-                                            з працевлаштування лікарів у Польщі. Завдяки їхньому 
-                                            професіоналізму та підтримці, я зміг успішно здійснити 
-                                            свою мрію про роботу в іншій країні.
+                                        <p>
+                                            Я хочу висловити щиру подяку команді нашого сайту з
+                                            працевлаштування лікарів у Польщі. Завдяки їхньому
+                                            професіоналізму та підтримці, я зміг успішно здійснити свою мрію
+                                            про роботу в іншій країні.
                                         </p>
-                                        <br>
-                                        <p> Рекомендую їхні послуги всім лікарям, 
-                                            які бажають знайти найкращі можливості в Польщі.
+                                        <br />
+                                        <p>
+                                            Рекомендую їхні послуги всім лікарям, які бажають знайти
+                                            найкращі можливості в Польщі.
                                         </p>
                                         <span>11 серпня 2022 р.</span>
                                     </div>
                                 </div>
-                                <div class="testimonials__slide next">
+
+                                <div class="swiper-slide swiper-slide--3">
                                     <div class="user">
                                         <img src="./img/user.png" alt="user">
                                         <div class="user__info">
@@ -433,22 +435,76 @@
                                         </div>
                                     </div>
                                     <div class="user__comments">
-                                        <p>Я хочу висловити щиру подяку команді нашого сайту 
-                                            з працевлаштування лікарів у Польщі. Завдяки їхньому 
-                                            професіоналізму та підтримці, я зміг успішно здійснити 
-                                            свою мрію про роботу в іншій країні.
+                                        <p>
+                                            Я хочу висловити щиру подяку команді нашого сайту з
+                                            працевлаштування лікарів у Польщі. Завдяки їхньому
+                                            професіоналізму та підтримці, я зміг успішно здійснити свою мрію
+                                            про роботу в іншій країні.
                                         </p>
-                                        <br>
-                                        <p> Рекомендую їхні послуги всім лікарям, 
-                                            які бажають знайти найкращі можливості в Польщі.
+                                        <br />
+                                        <p>
+                                            Рекомендую їхні послуги всім лікарям, які бажають знайти
+                                            найкращі можливості в Польщі.
+                                        </p>
+                                        <span>11 серпня 2022 р.</span>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide swiper-slide--4">
+                                    <div class="user">
+                                        <img src="./img/user.png" alt="user">
+                                        <div class="user__info">
+                                            <h4 class="user__name">Тетяна Бернада</h4>
+                                            <p class="user__text">
+                                                <span>рекомендує</span>
+                                                Optimus Work Med
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="user__comments">
+                                        <p>
+                                            Я хочу висловити щиру подяку команді нашого сайту з
+                                            працевлаштування лікарів у Польщі. Завдяки їхньому
+                                            професіоналізму та підтримці, я зміг успішно здійснити свою мрію
+                                            про роботу в іншій країні.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            Рекомендую їхні послуги всім лікарям, які бажають знайти
+                                            найкращі можливості в Польщі.
+                                        </p>
+                                        <span>11 серпня 2022 р.</span>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide swiper-slide--5">
+                                    <div class="user">
+                                        <img src="./img/user.png" alt="user">
+                                        <div class="user__info">
+                                            <h4 class="user__name">Тетяна Бернада</h4>
+                                            <p class="user__text">
+                                                <span>рекомендує</span>
+                                                Optimus Work Med
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="user__comments">
+                                        <p>
+                                            Я хочу висловити щиру подяку команді нашого сайту з
+                                            працевлаштування лікарів у Польщі. Завдяки їхньому
+                                            професіоналізму та підтримці, я зміг успішно здійснити свою мрію
+                                            про роботу в іншій країні.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            Рекомендую їхні послуги всім лікарям, які бажають знайти
+                                            найкращі можливості в Польщі.
                                         </p>
                                         <span>11 серпня 2022 р.</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <button class="prevBtn">←</button>
-                            <button class="nextBtn">→</button>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>

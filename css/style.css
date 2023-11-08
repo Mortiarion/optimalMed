@@ -29,6 +29,12 @@
     --main-fonts: 'Montserrat', sans-serif;
     --second-fonts: 'Raleway', sans-serif;
     --box-background: rgba(255, 255, 255, 0.60);
+    --color-ats-primary: #4527a0;
+    --color-ats-secondary: #6a1b9a;
+    --color-light: #fff;
+    --color-1: #0f2027;
+    --color-2: #203a4300;
+    --color-3: #2c536400;
 }
 
 .wrapper {

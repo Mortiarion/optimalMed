@@ -11,32 +11,34 @@ btnClose.addEventListener("click", function () {
 });
 
 
-const slidesContainer = document.querySelector(".slides");
-const prevBtn = document.querySelector(".prevBtn");
-const nextBtn = document.querySelector(".nextBtn");
-
-let currentIndex = 0;
-
-nextBtn.addEventListener("click", () => {
-    if (currentIndex < 2) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
-    updateSlider();
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 3,
+    slideShadows: true,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1560: {
+      slidesPerView: 3,
+    },
+  },
 });
-
-prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = 2;
-    }
-    updateSlider();
-});
-
-function updateSlider() {
-    const newTransformValue = `translateX(-${currentIndex * 100}vw)`;
-        slidesContainer.style.transform = newTransformValue;
-};
-
