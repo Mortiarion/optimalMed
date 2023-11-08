@@ -1,10 +1,7 @@
-.testimonials {
-}
 .testimonials .container {
     padding: 0 35px 0 40px;
 }
-.testimonials__wrapper {
-}
+
 .testimonials .title span,
 .testimonials .title{
     text-align: center;
@@ -12,38 +9,41 @@
     font-weight: 600;
     line-height: 30px;
 }
+
 .testimonials .title span {
     color: var(--title-color-second);
 }
-.testimonials__slider {
-}
+
 .testimonials__slide {
     padding: 11px 20px 25px;
     background-color: #ccc;
     border-radius: 20px;
 }
+
 .user {
     display: flex;
     align-items: center;
     margin: 0 0 20px 0;
 }
+
 .user img {
     margin: 0 20px 0 0;
 }
-.user__info {
-}
+
 .user__name {
     font-size: 14px;
     font-weight: 600;
     line-height: normal;
     letter-spacing: -0.28px;
 }
+
 .user__text {
     color: var(--subtitle-color);
     font-size: 10px;
     font-weight: 500;
     line-height: normal;
 }
+
 .user__text span {
     color: var(--subtitle-color);
     font-family: var(--second-fonts);
@@ -51,6 +51,7 @@
     font-style: italic;
     line-height: normal;
 }
+
 .user__comments p {
     font-family: var(--second-fonts);
     font-size: 14px;
@@ -58,6 +59,7 @@
     font-weight: 400;
     line-height: 21px;
 }
+
 .user__comments span {
     font-family: var(--second-fonts);
     font-size: 10px;
@@ -66,21 +68,6 @@
     text-align: right;
     margin: 10px 0 0 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .swiper {
     width: 100%;
