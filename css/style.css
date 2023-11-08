@@ -10,6 +10,7 @@
 @import url(./components/media/media__additional.css);
 @import url(./components/cheme.css);
 @import url(./components/media/media__scheme.css);
+@import url(./components/testimonials.css);
 
 * {
     box-sizing: border-box;
