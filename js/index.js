@@ -11,39 +11,9 @@ btnClose.addEventListener("click", function () {
 });
 
 
-var swiper = new Swiper(".swiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 90,
-    depth: 100,
-    modifier: 6,
-    slideShadows: true,
-  },
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 2,
-    },
-    1560: {
-      slidesPerView: 2,
-    },
-  },
-});
+/**--------------------------------------------- */
 
-let cards = document.getElementsByClassName("card"),
+let cards = document.getElementsByClassName("card");
   transforms = [
     { x: 0, z: 0, scale: 1, filter: "blur(0px)" },
     { x: "-105%", z: "-50px", scale: 0.999, filter: "blur(2.5px)" },
@@ -113,3 +83,76 @@ document.querySelector(".btn__next").addEventListener("click", showNext);
 document.querySelector(".btn__prev").addEventListener("click", showPrev);
 
 updateCards();
+
+
+
+let cardsTwo = document.getElementsByClassName("card__two");
+let transformsTwo = [
+  { x: 0, z: 0, scale: 1, filter: "blur(0px)" },
+  { x: "-105%", z: "-50px", scale: 0.999, filter: "blur(2.5px)" },
+  { x: "105%", z: "-50px", scale: 0.999, filter: "blur(2.5px)" },
+];
+
+let nextTransformTwo = function (x) {
+  if (x >= cardsTwo.length - 1) {
+    x = 0;
+  } else {
+    x++;
+  }
+  return x;
+};
+
+function nextTwo() {
+  for (i = 0; i < cardsTwo.length; i++) {
+    cardsTwo[i].style.transform =
+      "translateX(" +
+      transformsTwo[nextTransformTwo(i)].x +
+      ")" +
+      "translateZ(" +
+      transformsTwo[nextTransformTwo(i)].z +
+      ")" +
+      "scale(" +
+      transformsTwo[nextTransformTwo(i)].scale +
+      ")";
+    cardsTwo[i].style.filter = transformsTwo[nextTransformTwo(i)].filter;
+  }
+  transformsTwo.push(transformsTwo.shift());
+}
+
+document.getElementById("carousel__two").onclick = function () {
+  nextTwo();
+};
+
+var currentIndexTwo = 0;
+
+function updateCardsTwo() {
+  for (var i = 0; i < cardsTwo.length; i++) {
+    cardsTwo[i].style.transform =
+      "translateX(" +
+      transformsTwo[(i + currentIndexTwo) % cardsTwo.length].x +
+      ")" +
+      "translateZ(" +
+      transformsTwo[(i + currentIndexTwo) % cardsTwo.length].z +
+      ")" +
+      "scale(" +
+      transformsTwo[(i + currentIndexTwo) % cardsTwo.length].scale +
+      ")";
+    cardsTwo[i].style.filter =
+      transformsTwo[(i + currentIndexTwo) % cardsTwo.length].filter;
+  }
+}
+
+function showNextTwo() {
+  currentIndexTwo = (currentIndexTwo + 1) % cardsTwo.length;
+  updateCardsTwo();
+}
+
+function showPrevTwo() {
+  currentIndexTwo = (currentIndexTwo - 1 + cardsTwo.length) % cardsTwo.length;
+  updateCardsTwo();
+}
+
+document.querySelector(".btn__next-two").addEventListener("click", showNextTwo);
+document.querySelector(".btn__prev-two").addEventListener("click", showPrevTwo);
+
+updateCardsTwo();
