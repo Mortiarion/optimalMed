@@ -2,6 +2,9 @@
     background-color: var(--background-color);
 }
 
+.additional__wrapper {
+    padding: 0 0 36px 0;
+}
 .additional__block-1 .title {
     font-size: 20px;
     font-weight: 600;
@@ -64,8 +67,4 @@
     list-style: disc;
     padding-inline-start: 25px;
     margin: 0 0 20px 0;
-}
-
-.additional__block-2-content {
-    margin: 0 0 36px 0;
 }

@@ -6,6 +6,10 @@
     text-align: left;
 }
 
+.scheme__wrapper {
+    padding: 40px 0 0 0;
+}
+
 .scheme .title span {
     color: var(--title-color-second);
 }
