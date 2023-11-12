@@ -12,6 +12,20 @@
     }
 }
 
+@media (min-width: 425px) {
+    .header .navigation .email, 
+    .header .navigation .language__menu {
+        display: none;
+    }
+    .header .navigation .navigation__burger .email, 
+    .header .navigation .navigation__burger .language__menu {
+        display: block;
+    }
+    .header .container .navigation .navigation__list {
+        display: none;
+    }
+}
+
 @media (max-width: 425px) {
     .header .navigation .email, 
     .header .navigation .language__menu {
@@ -34,9 +48,11 @@
         line-height: 28px; 
         letter-spacing: -0.28px;
         margin-left: auto;
+        display: block;
     }
     .header .navigation .language__menu {
         margin: 0 0 0 40px;
+        display: block;
     }
     .btn__burger {
         margin: 0 17px 0 40px;
