@@ -24,6 +24,15 @@
     .header .container .navigation .navigation__list {
         display: none;
     }
+    .header__box {
+        width: 70%;
+        align-items: center;
+    }
+    .header .container {
+        background-image: url("./../../../img/doctor-women.png");
+        background-repeat: no-repeat;
+        background-position: 70% 100%;
+    }
 }
 
 @media (max-width: 425px) {
@@ -37,6 +46,15 @@
     }
     .header .container .navigation .navigation__list {
         display: none;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .header .container {
+        background-image: url("./../../../img/doctor-women.png");
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
     }
 }
 
