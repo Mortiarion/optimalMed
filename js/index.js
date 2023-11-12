@@ -50,10 +50,10 @@ document.getElementById("carousel").onclick = function () {
   next();
 };
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 function updateCards() {
-  for (var i = 0; i < cards.length; i++) {
+  for (let i = 0; i < cards.length; i++) {
     cards[i].style.transform =
       "translateX(" +
       transforms[(i + currentIndex) % cards.length].x +
@@ -85,12 +85,14 @@ document.querySelector(".btn__prev").addEventListener("click", showPrev);
 updateCards();
 
 
+/**--------------------------------------------- */
 
 let cardsTwo = document.getElementsByClassName("card__two");
-let transformsTwo = [
+
+transformsTwo = [
   { x: 0, z: 0, scale: 1, filter: "blur(0px)" },
-  { x: "-105%", z: "-50px", scale: 0.999, filter: "blur(2.5px)" },
-  { x: "105%", z: "-50px", scale: 0.999, filter: "blur(2.5px)" },
+  { x: "-93%", z: "-50px", scale: 0.8, filter: "blur(2.5px)" },
+  { x: "93%", z: "-50px", scale: 0.8, filter: "blur(2.5px)" },
 ];
 
 let nextTransformTwo = function (x) {
@@ -123,10 +125,10 @@ document.getElementById("carousel__two").onclick = function () {
   nextTwo();
 };
 
-var currentIndexTwo = 0;
+let currentIndexTwo = 0;
 
 function updateCardsTwo() {
-  for (var i = 0; i < cardsTwo.length; i++) {
+  for (let i = 0; i < cardsTwo.length; i++) {
     cardsTwo[i].style.transform =
       "translateX(" +
       transformsTwo[(i + currentIndexTwo) % cardsTwo.length].x +
