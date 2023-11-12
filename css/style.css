@@ -13,6 +13,7 @@
 @import url(./components/testimonials.css);
 @import url(./components/recommendation.css);
 @import url(./components/media/media__testimonials.css);
+@import url(./components/media/media__recommendation.css);
 
 * {
     box-sizing: border-box;

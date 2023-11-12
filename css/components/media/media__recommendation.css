@@ -1,0 +1,29 @@
+@media (min-width: 1024px) {
+    .null:nth-child(2) {
+        display: block;
+    }
+    .null:nth-child(3) {
+        display: block;
+    }
+    .null {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .recommendation .container {
+        max-width: 1400px;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+    .null:nth-child(4) {
+        display: block;
+    }
+    .null img,
+    .null {
+        width: 280px;
+    }
+    .swiper {
+        margin: 0 0 40px 0;
+    }
+}
