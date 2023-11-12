@@ -37,6 +37,9 @@
 @media (min-width: 1440px) {
     .additional .container {
         max-width: 1400px;
-        padding: 114px 130px 120px;
+        padding: 114px 130px 60px;
+    }
+    .additional__block-2-content {
+        margin: 0;
     }
 }

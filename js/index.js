@@ -158,3 +158,15 @@ document.querySelector(".btn__next-two").addEventListener("click", showNextTwo);
 document.querySelector(".btn__prev-two").addEventListener("click", showPrevTwo);
 
 updateCardsTwo();
+
+/**--------------------------------------------- */
+
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

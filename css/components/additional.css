@@ -1,3 +1,7 @@
+.additional {
+    background-color: var(--background-color);
+}
+
 .additional__block-1 .title {
     font-size: 20px;
     font-weight: 600;
@@ -30,7 +34,7 @@
 }
 
 .additional__image img {
-    background-color: #ccc;
+    background-color: var(--white-color);
     padding: 7px 22px;
     border-radius: 60px;
 }
