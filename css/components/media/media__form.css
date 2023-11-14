@@ -1,0 +1,13 @@
+@media (min-width: 1024px) {
+    .form .container {
+        max-width: 100%;
+    }
+    .form__box {
+        display: flex;
+        gap: 40px;
+        padding: 43px 30px 66px;
+    }
+    iframe {
+        height: 305px;
+    }
+}
