@@ -18,6 +18,7 @@
 @import url(./components/media/media__news.css);
 @import url(./components/form.css);
 @import url(./components/media/media__form.css);
+@import url(./components/progession.css);
 
 * {
     box-sizing: border-box;

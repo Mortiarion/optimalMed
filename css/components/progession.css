@@ -1,0 +1,44 @@
+.profession {
+}
+
+.container {
+}
+
+.profession__wrapper {
+}
+
+.profession__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+}
+
+.profession__title span {
+    color: var(--title-color-second);
+    font-size: 30px;
+    font-weight: 600;
+    line-height:  30px;
+}
+
+.mega__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    padding-left: 30px;
+    column-gap: 60px;
+}
+
+.mega__list li {
+    list-style: disc;
+    color: var(--title-color-second);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.mega__list li a {
+    text-decoration-line: underline;
+    color: var(--title-color-second);
+
+}
