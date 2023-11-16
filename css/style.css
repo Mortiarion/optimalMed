@@ -19,6 +19,9 @@
 @import url(./components/form.css);
 @import url(./components/media/media__form.css);
 @import url(./components/progession.css);
+@import url(./components/media/media__profession.css);
+@import url(./components/footer.css);
+@import url(./components/media/media__footer.css);
 
 * {
     box-sizing: border-box;

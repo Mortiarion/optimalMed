@@ -1,0 +1,26 @@
+@media (min-width: 1024px) {
+    .mega__list {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 60px;
+        margin: 0px 65px;
+        padding: 0;
+    }
+    .profession__title {
+        width: 60%;
+        text-align: left;
+        margin: 100px 0 40px 52px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .profession .container {
+        max-width: 1400px;
+    }
+    .mega__list {
+        margin: 0px 148px;
+    }
+    .profession__title {
+        margin: 100px 0px 40px 130px;
+        width: 50%;
+    }
+}
