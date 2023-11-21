@@ -1,3 +1,6 @@
+.news .container {
+    background: linear-gradient(0deg, rgba(172, 230, 234, 0.00) 0%, #ACE6EA 100%);
+}
 .news__wrapper {
     text-align: center;
     font-size: 30px;
