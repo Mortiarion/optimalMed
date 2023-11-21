@@ -23,4 +23,7 @@
         margin: 100px 0px 40px 130px;
         width: 50%;
     }
+    .profession__wrapper {
+        margin: 0 0 128px 0;
+    }
 }

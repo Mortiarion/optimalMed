@@ -50,6 +50,7 @@
 
 .active {
     display: flex;
+    z-index: 1;
 }
 
 .list__head {

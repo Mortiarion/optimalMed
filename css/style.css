@@ -22,6 +22,8 @@
 @import url(./components/media/media__profession.css);
 @import url(./components/footer.css);
 @import url(./components/media/media__footer.css);
+@import url(./components/blog/header__blog.css);
+@import url(./components/blog/media/media__header-blog.css);
 
 * {
     box-sizing: border-box;
@@ -32,6 +34,7 @@
 :root {
     --text-color-all: #080808;
     --title-color-second: #0FA4AE;
+    --breadcrumbs: #3BA9B2;
     --bg-testimonials: #ACE6EA;
     --subtitle-color: #555555;
     --background-color: #ACE6EA;
