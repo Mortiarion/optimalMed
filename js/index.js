@@ -172,15 +172,15 @@ btnClose.addEventListener("click", function () {
 
 /**--------------------------------------------- */
 
-// const swiperTwo = new Swiper(".swiper-two", {
-//   direction: "horizontal",
-//   loop: true,
-//   slidesPerView: 1,
-//   navigation: {
-//     nextEl: ".next",
-//     prevEl: ".prev",
-//   },
-// });
+const swiperTwo = new Swiper(".swiper-two", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+});
 
 /**--------------------------------------------- */
 
