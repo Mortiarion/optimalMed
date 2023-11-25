@@ -188,3 +188,7 @@
 .pagination__next {
     rotate: 180deg;
 }
+
+.pagination__none {
+    display: none;
+}

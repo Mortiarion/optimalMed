@@ -48,6 +48,9 @@
     .blog__text, .blog__card-footer {
         margin: 0;
     }
+    .pagination__none {
+        display: block;
+    }
 }
 
 @media (min-width: 1440px) {
