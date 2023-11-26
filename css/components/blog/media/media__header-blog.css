@@ -4,7 +4,8 @@
     }
 }
 @media (min-width: 1024px) {
-    .header .blog__container {
+    .header .blog__container,
+    .header .article__container {
         background-image: url("./../../../../img/blog/Rectangle-639-1024.png");
         height: 200px;
         margin: 20px 20px 0 20px;
@@ -54,7 +55,8 @@
 }
 
 @media (min-width: 1440px) {
-    .header .blog__container {
+    .header .blog__container,
+    .header .article__container {
         background-image: url("./../../../../img/blog/Rectangle-639-1400.png");
         height: 300px;
         margin: 20px auto 0;

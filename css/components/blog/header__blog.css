@@ -1,4 +1,5 @@
-.header .blog__container {
+.header .blog__container,
+.header .article__container {
     background-image: url("./../../../img/blog/Rectangle-639-blog-375.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -6,6 +7,7 @@
     height: 120px;
     margin: 10px 10px 0 10px;
     background-color: transparent;
+    border-radius: 10px;
 }
 
 .breadcrumbs__inner {
