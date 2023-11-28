@@ -44,12 +44,13 @@
 .badge {
     padding: 0 15px 20px 30px;
     border-radius: 20px;
-    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1)) 
+    /* filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1)) 
     drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.1)) 
     drop-shadow(0px 32px 32px rgba(0, 0, 0, 0.09)) 
     drop-shadow(0px 72px 43px rgba(0, 0, 0, 0.05)) 
     drop-shadow(0px 128px 51px rgba(0, 0, 0, 0.01)) 
-    drop-shadow(0px 201px 56px rgba(0, 0, 0, 0));
+    drop-shadow(0px 201px 56px rgba(0, 0, 0, 0)); */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
     background-color: var(--white-color);
 }
 
