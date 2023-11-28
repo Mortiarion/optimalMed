@@ -1,6 +1,4 @@
 .form__box {
-  /* display: flex; */
-  /* gap: 120px; */
     background-color: var(--title-color-second);
     border-radius: 20px;
     padding: 30px 30px;
@@ -9,9 +7,6 @@
 .form {
     display: flex;
     flex-direction: column;
-}
-
-.form__col-1 {
 }
 
 .contacts .title {
@@ -65,12 +60,6 @@
 
 .flex-box {
     display: flex;
-  /* gap: 10px; */
-}
-
-.form__col-2 {
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 .main__form {

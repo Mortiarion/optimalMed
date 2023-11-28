@@ -11,7 +11,6 @@
 }
 
 .breadcrumbs__inner {
-    /* padding: 45px 0px 40px; */
     margin: 0 0 14px 0;
 }
 
@@ -52,22 +51,14 @@
     font-weight: 500;
     line-height:  18px;
 }
-.blog {
-}
-.container {
-}
-.blog__wrapper {
-}
 
 .blog__title {
-    color: #080808;
+    color: var(--text-color-all);
     text-align: center;
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 44px 0;
-}
-.blog__content {
 }
 
 .blog__card {
@@ -131,29 +122,6 @@
     margin: 0 0 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .pagination {
     display: flex;
     align-items: center;
@@ -180,11 +148,6 @@
     height: 40px;
     display: flex;
     align-items: center;
-}
-
-.pagination__prev {
-    /* color: black; */
-    /* fill: red; */
 }
 
 .pagination__next {
