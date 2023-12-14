@@ -36,4 +36,11 @@
     .requierements .container {
         max-width: 1400px;
     }
+    .requierements {
+        background: linear-gradient(180deg, rgba(172, 230, 234, 0.00) 0%, #ACE6EA 100%);
+        padding: 0 0 1px 0;
+    }
+    .requierements__wrapper {
+        margin: 0;
+    }
 }
