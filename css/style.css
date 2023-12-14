@@ -26,6 +26,8 @@
 @import url(./components/blog/media/media__header-blog.css);
 @import url(./components/article/article.css);
 @import url(./components/article/media/media__article.css);
+@import url(./components/doctor__salary.css);
+@import url(./components/media/media__doctor-salary.css);
 /* @import url(./components/article-allergy/article-allergy.css); */
 /* @import url(./components/article-allergy/media/media__article-allergy.css); */
 

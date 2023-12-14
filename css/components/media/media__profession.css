@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+    .mega__list {
+        justify-items: center;
+    }
+}
+
 @media (min-width: 1024px) {
     .mega__list {
         grid-template-columns: repeat(4, 1fr);

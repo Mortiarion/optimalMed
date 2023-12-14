@@ -84,7 +84,8 @@
     letter-spacing: -0.48px;
 }
 
-.header .navigation__burger .email {
+.header .navigation__burger .email,
+.header .navigation .navigation__burger .tell {
     color: var(--button-color);
     font-size: 14px;
     font-weight: 700;
@@ -106,6 +107,11 @@
     color: var(--button-color);
 }
 
+.media__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
     text-align: center;
     font-size: 32px;
@@ -125,14 +131,15 @@
 .btn {
     background-color: var(--button-color);
     color: var(--white-color);
-    padding: 21px 94px 21px 69px;
+    padding: 21px 69px 21px 69px;
     border-radius: 35px;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
-    line-height: 28px; 
-    margin: 0 0 30px 0;
-    width: 100%;
+    line-height: 28px;
+    margin: 0 auto 30px auto;
+    width: fit-content;
+    white-space: nowrap;
 }
 
 .header__box {

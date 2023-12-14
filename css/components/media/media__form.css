@@ -11,6 +11,18 @@
     }
 }
 
+@media (min-width: 768px) {
+    .fb-col-1,
+    .fb-col-2 {
+        width: 195px;
+    }
+    iframe {
+        width: 100%;
+        height: 199px;
+    }
+    
+}
+
 @media (min-width: 1024px) {
     .form .container {
         max-width: 100%;

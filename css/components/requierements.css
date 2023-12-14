@@ -1,6 +1,6 @@
 .requierements {
-    background: linear-gradient(180deg, rgba(172, 230, 234, 0.00) 0%, #ACE6EA 100%);
-    padding: 0 0 1px 0;
+    background: linear-gradient(180deg, rgba(172, 230, 234, 0.00) -10%, #ACE6EA 100%);
+    padding: 60px 0 1px 0;
 }
 
 .requierements__wrapper {
