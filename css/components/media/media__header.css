@@ -59,7 +59,6 @@
     .header .container .navigation .navigation__list {
         display: none;
     }
-    
 }
 
 @media (max-width: 600px) {
@@ -154,13 +153,14 @@
         margin: 0 0 60px 0;
     }
     .header .container {
+        max-width: 1024px;
         margin: 20px 20px 0 20px;
         padding: 20px 32px 0 34px;
         border-radius: 20px;
         background-image: url("./../../../img/doctors-women-1.png");
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 99% 100%;
+        background-position: 103% 100%;
     }
     .navigation {
         padding: 24px 0;
@@ -188,7 +188,8 @@
     .media__wrapper {
         display: flex;
         flex-direction: column;
-        width: 62%;
+        width: 65%;
+        align-items: flex-start;
     }
     .btn {
         width: 227px;
@@ -206,7 +207,7 @@
     }
     .media-one{
         top: 390px;
-        right: 374px;
+        right: 348px;
     }
     .media-two {
         top: 169px;
@@ -214,7 +215,7 @@
     }
     .media-three {
         top: 530px;
-        right: 374px;
+        right: 348px;
     }
     .media-four {
         top: 329px;
@@ -312,6 +313,7 @@
     .media__wrapper {
         width: 50%;
         margin-left: 51px;
+        
     }
     .small__box {
         width: 180px;

@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+    .img-one {
+        width: 100%;
+    }
+}
+
 @media (min-width: 1024px) {
     .header .article__container {
         background-image: url("./../../../../img/article/Rectangle-639-article-1024.png")
@@ -23,6 +29,7 @@
         display: flex;
         gap: 38px;
         align-items: flex-start;
+        justify-content: center;
     }
     .article__work-poland p,
     .employment__media {
@@ -35,7 +42,7 @@
     }
     .article__work-poland,
     .employment__content {
-        width: 601px;
+        /* width: 601px; */
     }
     .article__work-poland h2,
     .employment__title,
