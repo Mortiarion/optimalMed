@@ -198,3 +198,14 @@
 .similar-none {
     display: none;
 }
+
+.salary-title-list {
+    color: var(--text-color-all);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+}
+.salary-doctor {
+    width: 100%;
+}
