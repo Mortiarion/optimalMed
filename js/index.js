@@ -257,3 +257,30 @@ function closeAllSelect(elmnt) {
 document.addEventListener("click", closeAllSelect);
 
 /**--------------------------------------------- */
+// Отримання всіх посилань навігаційного меню
+const menuLinks = document.querySelectorAll(
+    ".navigation__item a"
+);
+// console.log(menuLinks);
+
+// Функція, що обробляє клік на посиланні
+const navigateToSection = (e) => {
+  e.preventDefault(); // Заборона стандартної дії посилання
+
+  // Отримання атрибута href для навігаційного посилання
+  const targetId = e.target.getAttribute("href");
+  console.log(targetId);
+
+  // Перехід до відповідної секції
+  const targetSection = document.querySelector(targetId);
+  // console.log(targetSection);
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' }); // Плавний скролл до секції
+  }
+};
+
+// Додавання обробника подій до кожного посилання навігації
+menuLinks.forEach((link) => {
+  link.addEventListener('click', navigateToSection);
+});
+// console.log(link);
