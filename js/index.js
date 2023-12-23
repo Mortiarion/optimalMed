@@ -275,3 +275,7 @@ const navigateToSection = (e) => {
 menuLinks.forEach((link) => {
   link.addEventListener('click', navigateToSection);
 });
+
+/**--------------------------------------------- */
+
+
