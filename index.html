@@ -824,11 +824,12 @@
 							<div class="form__col-2">
 								<h3 class="title">Свяжитесь с нами:</h3>
 								<form class="main__form">
-									<input type="text" placeholder="Имя *">
-									<input type="phone" placeholder="Телефон *">
-									<input type="email" placeholder="Email">
+									<input type="text" placeholder="Имя *" required>
+									<input type="phone" placeholder="Телефон *" required>
+									<input type="email" placeholder="Email *" required>
 									<div class="custom-select">
-										<select>
+                                        <span class="tooltiptext" id="specializationTooltip">Пожалуйста, выберите специализацию врача!!!</span>
+										<select id="specialization" name="d" required>
 											<option value="0">Специализация врача *</option>
 											<option value="1">Аллерголог</option>
 											<option value="2">Анестезиолог</option>
@@ -934,7 +935,7 @@
                                 <li><a href="article-imunologist.html">Иммунолог</a></li>
                                 <li><a href="article-cardiologist.html">Кардиолог</a></li>
                                 <li><a href="article-cardiac-surgeon.html">Кардиохирург</a></li>
-                                <li><a href="#">Нарколог</a></li>
+                                <li><a href="article-narcologist.html">Нарколог</a></li>
                                 <li><a href="#">Невролог</a></li>
                                 <li><a href="#">Нейрохирург</a></li>
                                 <li><a href="#">Онколог</a></li>
@@ -996,6 +997,6 @@
             </div>
 		</footer>
     </div>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
