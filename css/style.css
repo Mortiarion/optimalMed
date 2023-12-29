@@ -147,7 +147,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .invalid:focus {
-    outline: red solid !important;
+    outline: red solid;
+}
+
+iframe {
+    border-radius: 10px;
+    width: 100%;
 }
 /* :focus {
     outline: red solid;
@@ -159,51 +164,13 @@ h1, h2, h3, h4, h5, h6 {
 /* #selespecializationct:required:invalid {
     color: red;
 } */
-#specializationTooltip {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    border: 1px solid grey;
-    font-size: 12px;
-    border-radius: 5px;
-    padding: 5px;
-    color: red;
-}
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    display: block; 
 }

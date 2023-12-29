@@ -1,8 +1,18 @@
-import "./components/customSelect.js";
+// import "./components/customSelect.js";
 import "./components/burgerMenu.js";
 import "./components/navigationToSection.js";
 import "./components/formValidation.js";
 
+function showOverlay() {
+    const overlay = document.querySelector(".overlay");
+    overlay.style.display = "block";
+}
+
+// Приховати overlay
+function hideOverlay() {
+    const overlay = document.querySelector(".overlay");
+    overlay.style.display = "none";
+}
 /**--------------------------------------------- */
 
 // let cards = document.getElementsByClassName("card");

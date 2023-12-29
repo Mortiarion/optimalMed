@@ -827,7 +827,7 @@
 									<input type="text" placeholder="Имя *" required>
 									<input type="phone" placeholder="Телефон *" required>
 									<input type="email" placeholder="Email *" required>
-									<div class="custom-select">
+									<!-- <div class="custom-select">
                                         <span class="tooltiptext" id="specializationTooltip">Пожалуйста, выберите специализацию врача!!!</span>
 										<select id="specialization" name="d" required>
 											<option value="0">Специализация врача *</option>
@@ -904,8 +904,102 @@
                                             <option value="71">Эпидемиолог</option>
                                             <option value="72">Другое</option>
 										</select>
-									</div>
-									<textarea class="arena-text" name="area" id="area" cols="30" rows="10" placeholder="Впишите текст сообщения..."></textarea>
+									</div> -->
+									<div class="dropdown-speciality">
+                                        
+                                        <div class="speciality">Специализация врача * 
+                                            <span class="number-selected"></span>
+                                        </div>
+                                        <div class="dropdown-list">
+                                            <h4 class="dropdown-title">Выберите специализацию</h4>
+                                            <div class="selected-specializations">
+                                                <!-- Сюди буде вставлятися вибрана спеціалізація -->
+                                            </div>
+                                            <div class="specialization-items">
+                                                <div class="item">
+                                                    <label><input type="checkbox" name="specialization" value="allergist"> Аллерголог</label>
+                                                    <label><input type="checkbox" name="specialization" value="andrologist"> Андролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="anesthesiologist"> Анестезіолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="obstetrician-gynecologist"> Акушер - гинеколог</label>
+                                                    <label><input type="checkbox" name="specialization" value="virologist"> Вирусолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="general-practitioner"> Врач без специализации</label>
+                                                    <label><input type="checkbox" name="specialization" value="gastroenterologist"> Гастроэнтеролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="hematologist"> Гематолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="geneticist"> Генетик</label>
+                                                    <label><input type="checkbox" name="specialization" value="geriatrician"> Гериатр</label>
+                                                    <label><input type="checkbox" name="specialization" value="dermatologist"> Дерматолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-anesthesiologist"> Детский анестезіолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-gynecologist"> Детский гинеколог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-gastroenterologist"> Детский гастроэнтеролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-dermatologist"> Детский дерматолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-cardiologist"> Детский кардиолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-neurologist"> Детский невролог</label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-otorhinolaryngologist"> Детский отоларинголог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-traumatologist-orthopedist"> Детский травматолог - ортопед</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-surgeon"> Детский хирург</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-pulmonologist"> Детский пульмонолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-nephrologist"> Детский нефролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-urologist"> Детский уролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatric-endocrinologist"> Детский эндокринолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="immunologist"> Иммунолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="infectious-disease-specialist"> Инфекционист</label>
+                                                    <label><input type="checkbox" name="specialization" value="cardiologist"> Кардиолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="cardiovascular-surgeon"> Кардиохирург</label>
+                                                    <label><input type="checkbox" name="specialization" value="laboratory-diagnostician"> Лабораторная диагностика</label>
+                                                    <label><input type="checkbox" name="specialization" value="mammologist"> Маммолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="narcologist"> Нарколог</label>
+                                                    <label><input type="checkbox" name="specialization" value="neurologist"> Невролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="neurosurgeon"> Нейрохирург</label>
+                                                    <label><input type="checkbox" name="specialization" value="neonatologist"> Неонатолог</label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <label><input type="checkbox" name="specialization" value="emergency-medicine"> Неотложные состояния</label>
+                                                    <label><input type="checkbox" name="specialization" value="nephrologist"> Нефролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="oncologist"> Онколог</label>
+                                                    <label><input type="checkbox" name="specialization" value="otolaryngologist"> Отоларинголог</label>
+                                                    <label><input type="checkbox" name="specialization" value="ophthalmologist"> Офтальмолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pathologist"> Патологоанатом</label>
+                                                    <label><input type="checkbox" name="specialization" value="pediatrician"> Педиатр</label>
+                                                    <label><input type="checkbox" name="specialization" value="proctologist"> Проктолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="pulmonologist"> Пульмонолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="psychiatrist"> Психиатр</label>
+                                                    <label><input type="checkbox" name="specialization" value="radiologist"> Радиолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="rehabilitation-specialist"> Реабилитолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="forensic-medical-expert"> Судебно-медицинский эксперт</label>
+                                                    <label><input type="checkbox" name="specialization" value="vascular-surgeon"> Сосудистый хирург</label>
+                                                    <label><input type="checkbox" name="specialization" value="dentist"> Стоматолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="rheumatologist"> Ревматолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="traumatologist-orthopedist"> Травматолог - ортопед</label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <label><input type="checkbox" name="specialization" value="therapist"> Терапевт</label>
+                                                    <label><input type="checkbox" name="specialization" value="toxicologist"> Токсиколог</label>
+                                                    <label><input type="checkbox" name="specialization" value="transfusiologist"> Трансфузиолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="ultrasound-diagnostician"> Ультразвуковая диагностика</label>
+                                                    <label><input type="checkbox" name="specialization" value="urologist"> Уролог</label>
+                                                    <label><input type="checkbox" name="specialization" value="phoniatrist"> Фониатр</label>
+                                                    <label><input type="checkbox" name="specialization" value="phthisiatrist"> Фтизиатр</label>
+                                                    <label><input type="checkbox" name="specialization" value="chemotherapist"> Химиотерапевт</label>
+                                                    <label><input type="checkbox" name="specialization" value="general-surgeon"> Хирург общий</label>
+                                                    <label><input type="checkbox" name="specialization" value="oncological-surgeon"> Хирург онколог</label>
+                                                    <label><input type="checkbox" name="specialization" value="plastic-surgeon"> Хирург пластический</label>
+                                                    <label><input type="checkbox" name="specialization" value="endocrinologist"> Эндокринолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="endoscopist"> Эндоскопия</label>
+                                                    <label><input type="checkbox" name="specialization" value="epidemiologist"> Эпидемиолог</label>
+                                                    <label><input type="checkbox" name="specialization" value="other"> Другое</label>
+                                                </div>
+
+                                            </div>
+                                            <button id="selectButton">Выбрать</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <textarea class="arena-text" name="area" id="area" cols="30" rows="10" placeholder="Впишите текст сообщения..."></textarea>
 									<button class="form-btn btn" type="submit">Отправлять</button>
 								</form>
 							</div>
@@ -996,6 +1090,7 @@
                 </div>
             </div>
 		</footer>
+        <div class="overlay"></div>
     </div>
     <script type="module" src="./js/index.js"></script>
 </body>
