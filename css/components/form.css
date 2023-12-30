@@ -184,6 +184,9 @@
     cursor: pointer;
     border: 1px solid rgba(85, 85, 85, 0.50);
 }
+.speciality {
+    pointer-events: none;
+}
 
 .dropdown-speciality:after,
 .selected-specializations:after {
@@ -211,64 +214,3 @@
 
 
 
-.dropdown-list {
-    position: absolute;
-    background-color: var(--white-color);
-    /* border: 1px solid rgb(85 85 85 / 50%); */
-    border-radius: 20px;
-    z-index: 10000;
-    padding: 40px;
-    top: 50%; 
-    /* left: 50%; */
-    transform: translate(-50%, -50%);
-    cursor: default;
-}
-.dropdown-title {
-    margin: 0 0 20px 0;
-    color: #000;
-    text-align: center;
-    font-size: 38px;
-    font-weight: 600;
-    line-height: 38px;
-    font-family: var(--main-fonts);
-}
-.selected-specializations {
-    position: relative;
-    background-color: var(--white-color);
-    border-radius: 10px;
-    height: 64px;
-    margin: 0 0 20px 0;
-    display: flex;
-    align-items: center;
-    padding: 0 28px;
-    font-family: var(--second-fonts);
-    font-size: 14px;
-    line-height: 14px;
-    cursor: pointer;
-    border: 1px solid rgba(85, 85, 85, 0.50);
-}
-
-.specialization-items input {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.specialization-items {
-    display: flex;
-    gap: 40px;
-    padding: 40px;
-}
-.item {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    white-space: nowrap;
-    gap: 16px;
-}
-.item label,
-.item input {
-    display: flex;
-    gap: 8px;
-    cursor: pointer;
-}

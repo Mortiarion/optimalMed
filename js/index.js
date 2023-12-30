@@ -3,16 +3,38 @@ import "./components/burgerMenu.js";
 import "./components/navigationToSection.js";
 import "./components/formValidation.js";
 
-function showOverlay() {
-    const overlay = document.querySelector(".overlay");
-    overlay.style.display = "block";
-}
+const overlay = document.querySelector(".overlay");
+const dropdownSpeciality = document.querySelector(".dropdown-speciality");
+const dropdownList = document.querySelector(".dropdown-list");
+const closeDropdown = document.querySelector(".close-dropdown");
 
-// Приховати overlay
-function hideOverlay() {
-    const overlay = document.querySelector(".overlay");
-    overlay.style.display = "none";
-}
+const toggleOverlay = () => {
+    overlay.classList.toggle("active-overlay");
+};
+
+const toggleDropdownList = () => {
+    dropdownList.classList.toggle("active-dropdown-list");
+};
+
+document.addEventListener("click", (event) => {
+    const isDropdownSpeciality = event.target === dropdownSpeciality;
+    const isCloseDropdown = event.target === closeDropdown;
+    const isOverlay = event.target === overlay;
+    if (isDropdownSpeciality) {
+        toggleDropdownList();
+        toggleOverlay();
+    }
+
+    if (isCloseDropdown) {
+        toggleDropdownList();
+        toggleOverlay();
+    }
+
+    if (isOverlay) {
+        toggleDropdownList();
+        toggleOverlay();
+    }
+});
 /**--------------------------------------------- */
 
 // let cards = document.getElementsByClassName("card");
@@ -279,3 +301,333 @@ function hideOverlay() {
 // });
 
 /**--------------------------------------------- */
+
+// const checkboxContainer = document.querySelectorAll(".checkbox-container");
+// const selectedSpecializations = document.querySelector(
+//     ".selected-specializations"
+// );
+// console.log(checkboxContainer);
+
+// checkboxContainer.forEach((item) => {
+//     item.addEventListener("click", () => {
+//         const innerContent = item.textContent.trim();
+//         // console.log(innerContent);
+//         const isChecked = item.classList.contains("checked");
+//         // console.log(isSelected);
+//         if (!isChecked) {
+//             selectedSpecializations.textContent += innerContent + " ";
+//             item.classList.toggle("checked");
+//         } else {
+//             selectedSpecializations.textContent =
+//                 selectedSpecializations.textContent.replace(
+//                     innerContent + " ",
+//                     ""
+//                 );
+//             item.classList.toggle("checked");
+//         }
+//     });
+// });
+
+// const checkedItems = [];
+
+// checkboxContainer.forEach((item) => {
+//     item.addEventListener("click", () => {
+//         const innerContent = item.textContent;
+//         console.log(checkedItems.includes(innerContent));
+
+//         if (checkedItems.includes(innerContent)) {
+//             checkedItems.splice(checkedItems.indexOf(innerContent), 1);
+//         } else {
+//             checkedItems.push(innerContent);
+//         }
+
+//         selectedSpecializations.textContent = checkedItems.join(", ");
+//     });
+// });
+
+/**--------------------------------------------- */
+
+// const checkboxContainers = document.querySelectorAll(".checkbox-container");
+// const selectedSpecializations = document.querySelector(
+//     ".selected-specializations"
+// );
+// const selectButton = document.getElementById("selectButton");
+
+// const selectedItems = [];
+
+// checkboxContainers.forEach((container) => {
+//     const checkbox = container.querySelector('input[type="checkbox"]');
+//     const text = container.textContent.trim();
+
+//     container.addEventListener("click", () => {
+//         checkbox.checked = !checkbox.checked; // Інвертуємо значення прапорця при кожному кліку на контейнер
+
+//         if (checkbox.checked) {
+//             if (!selectedItems.includes(text)) {
+//                 selectedItems.push(text);
+//             }
+//         } else {
+//             const index = selectedItems.indexOf(text);
+//             if (index !== -1) {
+//                 selectedItems.splice(index, 1);
+//             }
+//         }
+
+//         selectedSpecializations.textContent = selectedItems.join(", ");
+//     });
+// });
+
+// selectButton.addEventListener("click", () => {
+//     // Очищаємо вибрані елементи
+//     selectedItems.length = 0;
+//     selectedSpecializations.textContent = "";
+
+//     // Знімаємо прапорці
+//     checkboxContainers.forEach((container) => {
+//         const checkbox = container.querySelector('input[type="checkbox"]');
+//         checkbox.checked = false;
+//     });
+// });
+/**--------------------------------------------- */
+// document.addEventListener("DOMContentLoaded", function () {
+//     const checkboxContainers = document.querySelectorAll(".checkbox-container");
+//     const selectedSpecializations = document.querySelector(
+//         ".selected-specializations"
+//     );
+//     const selectButton = document.getElementById("selectButton");
+
+//     const selectedItems = [];
+
+//     checkboxContainers.forEach((container) => {
+//         const checkbox = container.querySelector('input[type="checkbox"]');
+//         const text = container.textContent.trim();
+
+//         container.addEventListener("click", () => {
+//             checkbox.checked = !checkbox.checked; // Інвертуємо значення прапорця при кожному кліку на контейнер
+
+//             if (checkbox.checked) {
+//                 if (!selectedItems.includes(text)) {
+//                     selectedItems.push(text);
+//                     const span = document.createElement("span");
+//                     span.classList.add("checked-element");
+//                     span.textContent = text;
+
+//                     const closeBtn = document.createElement("span");
+//                     closeBtn.classList.add("close-btn");
+//                     closeBtn.innerHTML = "&#10006;";
+
+//                     span.appendChild(closeBtn);
+//                     selectedSpecializations.appendChild(span);
+//                     if (closeBtn) {
+//                         closeBtn.addEventListener("click", () => {
+//                             // Очищаємо вибрані елементи
+//                             selectedItems.length = 0;
+//                             selectedSpecializations.textContent = "";
+
+//                             // Знімаємо прапорці
+//                             checkboxContainers.forEach((container) => {
+//                                 const checkbox = container.querySelector(
+//                                     'input[type="checkbox"]'
+//                                 );
+//                                 checkbox.checked = false;
+//                             });
+//                         });
+//                     }
+//                 }
+//             } else {
+//                 const index = selectedItems.indexOf(text);
+//                 if (index !== -1) {
+//                     selectedItems.splice(index, 1);
+//                     const spans =
+//                         selectedSpecializations.querySelectorAll(
+//                             ".checked-element"
+//                         );
+//                     spans.forEach((span) => {
+//                         if (span.textContent === text) {
+//                             span.remove();
+//                         }
+//                     });
+//                 }
+//             }
+//         });
+//     });
+
+//     selectButton.addEventListener("click", () => {
+//         // Очищаємо вибрані елементи
+//         selectedItems.length = 0;
+//         selectedSpecializations.textContent = "";
+
+//         // Знімаємо прапорці
+//         checkboxContainers.forEach((container) => {
+//             const checkbox = container.querySelector('input[type="checkbox"]');
+//             checkbox.checked = false;
+//         });
+//     });
+// });
+
+
+/**--------------------------------------------- */
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const checkboxContainers = document.querySelectorAll(".checkbox-container");
+//     const selectedSpecializations = document.querySelector(
+//         ".selected-specializations"
+//     );
+//     const selectButton = document.getElementById("selectButton");
+
+//     const selectedItems = [];
+
+//     checkboxContainers.forEach((container) => {
+//         const checkbox = container.querySelector('input[type="checkbox"]');
+//         const text = container.textContent.trim();
+
+//         container.addEventListener("click", () => {
+//             checkbox.checked = !checkbox.checked;
+
+//             if (checkbox.checked) {
+//                 if (!selectedItems.includes(text)) {
+//                     selectedItems.push(text);
+//                     const span = document.createElement("span");
+//                     span.classList.add("checked-element");
+//                     span.textContent = text;
+
+//                     const closeBtn = document.createElement("span");
+//                     closeBtn.classList.add("close-btn");
+//                     closeBtn.innerHTML = "&#10006;";
+//                     span.appendChild(closeBtn);
+
+//                     selectedSpecializations.appendChild(span);
+//                 }
+//             } else {
+//                 const index = selectedItems.indexOf(text);
+//                 if (index !== -1) {
+//                     selectedItems.splice(index, 1);
+//                     const spans =
+//                         selectedSpecializations.querySelectorAll(
+//                             ".checked-element"
+//                         );
+//                     spans.forEach((span) => {
+//                         if (span.textContent === text) {
+//                             span.remove();
+//                         }
+//                     });
+//                 }
+//             }
+//         });
+
+//         // Видаляємо елемент при кліку на хрестик
+//         selectedSpecializations.addEventListener("click", (event) => {
+//             if (event.target.classList.contains("close-btn")) {
+//                 const span = event.target.parentElement;
+//                 const specializationText = span.textContent;
+//                 const index = selectedItems.indexOf(specializationText);
+//                 if (index !== -1) {
+//                     selectedItems.splice(index, 1);
+//                 }
+//                 span.remove();
+
+//                 // Знайти відповідний чекбокс та скасувати опцію "checked"
+//                 checkboxContainers.forEach((container) => {
+//                     if (container.textContent.trim() === specializationText) {
+//                         const checkbox = container.querySelector(
+//                             'input[type="checkbox"]'
+//                         );
+//                         checkbox.checked = false;
+//                     }
+//                 });
+//             }
+//         });
+//     });
+
+//     selectButton.addEventListener("click", () => {
+//         selectedItems.length = 0;
+//         selectedSpecializations.textContent = "";
+
+//         checkboxContainers.forEach((container) => {
+//             const checkbox = container.querySelector('input[type="checkbox"]');
+//             checkbox.checked = false;
+//         });
+//     });
+// });
+/**--------------------------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxContainers = document.querySelectorAll(".checkbox-container");
+    const selectedSpecializations = document.querySelector(
+        ".selected-specializations"
+    );
+    const selectButton = document.getElementById("selectButton");
+
+    const selectedItems = [];
+
+    checkboxContainers.forEach((container) => {
+        const checkbox = container.querySelector('input[type="checkbox"]');
+        const text = container.textContent.trim();
+
+        container.addEventListener("click", () => {
+            checkbox.checked = !checkbox.checked;
+
+            if (checkbox.checked) {
+                if (!selectedItems.includes(text)) {
+                    selectedItems.push(text);
+                    const span = document.createElement("span");
+                    span.classList.add("checked-element");
+                    span.textContent = text;
+
+                    const closeBtn = document.createElement("span");
+                    closeBtn.classList.add("close-btn");
+                    closeBtn.innerHTML = "&#10006;"; // Додаємо хрестик
+                    span.appendChild(closeBtn);
+
+                    selectedSpecializations.appendChild(span);
+                }
+            } else {
+                const index = selectedItems.indexOf(text);
+                if (index !== -1) {
+                    selectedItems.splice(index, 1);
+                    const spans =
+                        selectedSpecializations.querySelectorAll(
+                            ".checked-element"
+                        );
+                    spans.forEach((span) => {
+                        if (span.textContent === text) {
+                            span.remove();
+                        }
+                    });
+                }
+            }
+        });
+
+        // Видалення елемента при кліку на хрестик
+        selectedSpecializations.addEventListener("click", (event) => {
+            if (event.target.classList.contains("close-btn")) {
+                const span = event.target.parentElement;
+                const specializationText = span.textContent;
+                const index = selectedItems.indexOf(specializationText);
+                if (index !== -1) {
+                    selectedItems.splice(index, 1);
+                }
+                span.remove();
+
+                // Знайти відповідний чекбокс та скасувати опцію "checked"
+                checkboxContainers.forEach((container) => {
+                    if (container.textContent.trim() === specializationText) {
+                        const checkbox = container.querySelector(
+                            'input[type="checkbox"]'
+                        );
+                        checkbox.checked = false;
+                    }
+                });
+            }
+        });
+    });
+
+    selectButton.addEventListener("click", () => {
+        selectedItems.length = 0;
+        selectedSpecializations.textContent = "";
+
+        checkboxContainers.forEach((container) => {
+            const checkbox = container.querySelector('input[type="checkbox"]');
+            checkbox.checked = false;
+        });
+    });
+});

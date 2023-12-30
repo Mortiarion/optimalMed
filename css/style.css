@@ -172,5 +172,166 @@ iframe {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 9999; 
-    display: block; 
+    display: none; 
 }
+.active-overlay {
+    display: block;
+}
+
+.dropdown-list {
+    /* max-width: 1200px; */
+    /* height: 991px; */
+    position: fixed;
+    /* position: absolute; */
+    background-color: var(--white-color);
+    border-radius: 20px;
+    z-index: 10000;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid rgba(85, 85, 85, 0.50); */
+}
+.active-dropdown-list {
+    display: flex;
+}
+
+.dropdown-title {
+    margin: 0 0 20px 0;
+    color: #000;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 38px;
+    font-family: var(--main-fonts);
+}
+
+.selected-specializations {
+    position: relative;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    height: 54px;
+    width: 100%;
+    /* margin: 0 0 20px 0; */
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    font-family: var(--second-fonts);
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+    border: 1px solid rgba(85, 85, 85, 0.50);
+}
+
+.specialization-items input {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.specialization-items {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    white-space: nowrap;
+    /* gap: 16px; */
+}
+
+.item label,
+.item input {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--text-color-all);
+    font-family: var(--second-fonts);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32.2px;
+}
+
+.selected-specializations:after {
+    top: 25px;
+}
+
+#selectButton {
+    margin: 0 auto;
+}
+
+.close-dropdown {
+    position: absolute;
+    top: -5%;
+    right: -5%;
+}
+.close-dropdown img {
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Сховати оригінальний чекбокс */
+.checkbox-container input {
+    display: none;
+}
+
+/* Створення стилізованого чекбокса */
+.checkbox-container .checkmark {
+    display: flex;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    margin: auto 0px auto 0;
+}
+
+/* Стилізація вигляду "чекбокса" */
+.checkbox-container .checkmark::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    border: 1px solid rgba(131, 131, 131, 1);
+}
+
+/* Стилізація позначки "галочки" */
+.checkbox-container input:checked ~ .checkmark::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url("./../img/check-alt-svgrepo-com1.svg");
+    background-repeat: no-repeat;
+    background-color: rgba(15, 164, 174, 1);
+    border-radius: 3px;
+    background-position: center;
+}
+
