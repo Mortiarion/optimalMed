@@ -180,7 +180,7 @@ iframe {
 
 .dropdown-list {
     /* max-width: 1200px; */
-    /* height: 991px; */
+    /* height: 300px; */
     position: fixed;
     /* position: absolute; */
     background-color: var(--white-color);
@@ -214,17 +214,19 @@ iframe {
     position: relative;
     background-color: var(--white-color);
     border-radius: 10px;
-    height: 54px;
+    min-height: 54px;
     width: 100%;
     /* margin: 0 0 20px 0; */
     display: flex;
     align-items: center;
-    padding: 0 28px;
+    padding: 0 20px;
     font-family: var(--second-fonts);
     font-size: 14px;
     line-height: 14px;
     cursor: pointer;
     border: 1px solid rgba(85, 85, 85, 0.50);
+    /* gap: 10px; */
+    flex-wrap: wrap;
 }
 
 .specialization-items input {
@@ -263,7 +265,7 @@ iframe {
     top: 25px;
 }
 
-#selectButton {
+#select-button {
     margin: 0 auto;
 }
 
@@ -275,8 +277,25 @@ iframe {
 .close-dropdown img {
     pointer-events: none;
 }
+.checked-element {
+    border-radius: 10px;
+    background-color: #EBFBFC;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 8px; */
+    white-space: nowrap;
+    margin: 5px;
+    color: var(--text-color-all);
+    font-family: var(--second-fonts);
+    font-size: 14px;
+    line-height: 14px;
+}
 
-
+.delete-btn {
+    margin-left: 8px;
+}
 
 
 

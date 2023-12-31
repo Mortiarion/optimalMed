@@ -465,7 +465,6 @@ document.addEventListener("click", (event) => {
 //     });
 // });
 
-
 /**--------------------------------------------- */
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -549,85 +548,185 @@ document.addEventListener("click", (event) => {
 //         });
 //     });
 // });
+
 /**--------------------------------------------- */
-document.addEventListener("DOMContentLoaded", function () {
-    const checkboxContainers = document.querySelectorAll(".checkbox-container");
-    const selectedSpecializations = document.querySelector(
-        ".selected-specializations"
-    );
-    const selectButton = document.getElementById("selectButton");
 
-    const selectedItems = [];
+// отримуєм доступ до елементів які нам потрібні в подальшому
+const checkBoxContainers = document.querySelectorAll(".checkbox-container");
+const selectedSpecializations = document.querySelector(
+    ".selected-specializations"
+);
+const selectButton = document.getElementById("select-button");
+const selectedItems = [];
 
-    checkboxContainers.forEach((container) => {
-        const checkbox = container.querySelector('input[type="checkbox"]');
-        const text = container.textContent.trim();
+// forEach ми використувуєм щоб пребрати весь список доступ них елементом
+checkBoxContainers.forEach((container) => {
+    const checkBox = container.querySelector("input[type='checkbox']"); // знаходим чекбокс в контейнерах
+    const text = container.textContent.trim(); // знаходим текст і видаляєм пробіли щоб не листати кілометрове полотно
 
-        container.addEventListener("click", () => {
-            checkbox.checked = !checkbox.checked;
+    container.addEventListener("change", () => { // прослуховувач подій на зміну стану. на майбутнє в випадках селекта чекбокса або радіо кнопок. ато замахався понімати чого не робили з cklick
+        if (checkBox.checked) { // провірка чи чекбоес активний
+            if (!selectedItems.includes(text)) { // Якщо чекбокс відзначений і текст ще не знаходиться серед обраних елементів
+                selectedItems.push(text); // Додаємо текст до масиву обраних елементів
 
-            if (checkbox.checked) {
-                if (!selectedItems.includes(text)) {
-                    selectedItems.push(text);
-                    const span = document.createElement("span");
-                    span.classList.add("checked-element");
-                    span.textContent = text;
+                const span = document.createElement("span"); // створення елементу куди будем поміщати дані і далі кнопку видалення
+                span.classList.add("checked-element");
+                span.textContent = text;
+                span.dataset.value = text; // Додаємо атрибут зі значенням для пошуку
 
-                    const closeBtn = document.createElement("span");
-                    closeBtn.classList.add("close-btn");
-                    closeBtn.innerHTML = "&#10006;"; // Додаємо хрестик
-                    span.appendChild(closeBtn);
 
-                    selectedSpecializations.appendChild(span);
-                }
-            } else {
-                const index = selectedItems.indexOf(text);
-                if (index !== -1) {
-                    selectedItems.splice(index, 1);
-                    const spans =
-                        selectedSpecializations.querySelectorAll(
-                            ".checked-element"
-                        );
-                    spans.forEach((span) => {
-                        if (span.textContent === text) {
-                            span.remove();
-                        }
-                    });
+                const deleteBtn = document.createElement("button"); // це та кнопка виделення
+                deleteBtn.classList.add("delete-btn");
+                deleteBtn.innerHTML = "&#10006";
+
+                span.appendChild(deleteBtn);
+
+                selectedSpecializations.appendChild(span);
+            }
+        } else {
+            // якщо чекбокс занятий
+            const index = selectedItems.indexOf(text);
+            // console.log(index);
+            if (index !== -1) {
+                selectedItems.splice(index, 1); // видаляєм текст з масиву обраних елементів
+
+                // Знаходимо вибраний елемент у відображенні вибраних спеціалізацій та видаляємо його
+                const spanToRemove = selectedSpecializations.querySelector(
+                    `span[data-value="${text}"]`
+                );
+                // console.log(spanToRemove);
+                if (spanToRemove) {
+                    spanToRemove.remove();
                 }
             }
-        });
+        }
+        updateSelectedCount();
+    });
 
-        // Видалення елемента при кліку на хрестик
-        selectedSpecializations.addEventListener("click", (event) => {
-            if (event.target.classList.contains("close-btn")) {
-                const span = event.target.parentElement;
-                const specializationText = span.textContent;
-                const index = selectedItems.indexOf(specializationText);
-                if (index !== -1) {
-                    selectedItems.splice(index, 1);
-                }
-                span.remove();
-
-                // Знайти відповідний чекбокс та скасувати опцію "checked"
-                checkboxContainers.forEach((container) => {
-                    if (container.textContent.trim() === specializationText) {
-                        const checkbox = container.querySelector(
-                            'input[type="checkbox"]'
-                        );
-                        checkbox.checked = false;
-                    }
-                });
+    selectedSpecializations.addEventListener("click", (event) => {
+        if (event.target.classList.contains("delete-btn")) {
+            const span = event.target.parentElement;
+            // console.log(span);
+            const specializationText = span.getAttribute("data-value");
+            // console.log(specializationText);
+            const index = selectedItems.indexOf(specializationText);
+            if (index !== -1) {
+                selectedItems.splice(index, 1);
             }
-        });
+            span.remove();
+
+            // Знайти відповідний чекбокс та скасувати опцію "checked"
+            checkBoxContainers.forEach((container) => {
+                const checkBox = container.querySelector(
+                    "input[type='checkbox']"
+                );
+            });
+            if (container.textContent.trim() === specializationText) {
+                checkBox.checked = false;
+            }
+            updateSelectedCount();
+        }
     });
 
     selectButton.addEventListener("click", () => {
         selectedItems.length = 0;
         selectedSpecializations.textContent = "";
 
-        checkboxContainers.forEach((container) => {
-            const checkbox = container.querySelector('input[type="checkbox"]');
-            checkbox.checked = false;
+        checkBoxContainers.forEach((container) => {
+            const checkBox = container.querySelector("input[type='checkbox']");
+            checkBox.checked = false;
         });
+        
+        updateSelectedCount();
     });
 });
+
+const updateSelectedCount = () => {
+    const count = selectedItems.length;
+    const selectedText = `Выбрано ${count} специализаций`;
+
+    // Ваш елемент, де ви хочете відображати кількість вибраних елементів
+    const selectedCountElement = document.querySelector(".number-selected");
+    selectedCountElement.textContent = selectedText;
+}
+
+/**--------------------------------------------- */
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const checkboxContainers = document.querySelectorAll(".checkbox-container");
+//     const selectedSpecializations = document.querySelector(
+//         ".selected-specializations"
+//     );
+//     const selectButton = document.getElementById("selectButton");
+
+//     const selectedItems = [];
+
+//     checkboxContainers.forEach((container) => {
+//         const checkbox = container.querySelector('input[type="checkbox"]');
+//         const text = container.textContent.trim();
+
+//         container.addEventListener("change", () => {
+//             if (checkbox.checked) {
+//                 if (!selectedItems.includes(text)) {
+//                     selectedItems.push(text);
+//                     const span = document.createElement("span");
+//                     span.classList.add("checked-element");
+//                     span.textContent = text;
+//                     span.dataset.value = text; // Додали атрибут зі значенням для пошуку
+
+//                     const closeBtn = document.createElement("span");
+//                     closeBtn.classList.add("close-btn");
+//                     closeBtn.innerHTML = "&#10006;";
+//                     span.appendChild(closeBtn);
+
+//                     selectedSpecializations.appendChild(span);
+//                 }
+//             } else {
+//                 const index = selectedItems.indexOf(text);
+//                 if (index !== -1) {
+//                     selectedItems.splice(index, 1);
+//                     const spanToRemove = selectedSpecializations.querySelector(
+//                         `span[data-value="${text}"]`
+//                     );
+//                     if (spanToRemove) {
+//                         spanToRemove.remove();
+//                     }
+//                 }
+//             }
+//         });
+
+//         // Видалення елемента при кліку на хрестик
+//         selectedSpecializations.addEventListener("click", (event) => {
+//             if (event.target.classList.contains("close-btn")) {
+//                 const span = event.target.parentElement;
+//                 const specializationText = span.getAttribute("data-value");
+//                 const index = selectedItems.indexOf(specializationText);
+//                 if (index !== -1) {
+//                     selectedItems.splice(index, 1);
+//                 }
+//                 span.remove();
+
+//                 // Знайти відповідний чекбокс та скасувати опцію "checked"
+//                 checkboxContainers.forEach((container) => {
+//                     const checkbox = container.querySelector(
+//                         'input[type="checkbox"]'
+//                     );
+//                     if (container.textContent.trim() === specializationText) {
+//                         checkbox.checked = false;
+//                     }
+//                 });
+//             }
+//         });
+//     });
+
+//     selectButton.addEventListener("click", () => {
+//         selectedItems.length = 0;
+//         selectedSpecializations.textContent = "";
+
+//         checkboxContainers.forEach((container) => {
+//             const checkbox = container.querySelector('input[type="checkbox"]');
+//             checkbox.checked = false;
+//         });
+//     });
+// });
