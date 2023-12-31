@@ -643,7 +643,7 @@ checkBoxContainers.forEach((container) => {
 
 const updateSelectedCount = () => {
     const count = selectedItems.length;
-    const selectedText = `Выбрано ${count} специализаций`;
+    const selectedText = `выбрано ${count} специализаций`;
 
     // Ваш елемент, де ви хочете відображати кількість вибраних елементів
     const selectedCountElement = document.querySelector(".number-selected");
