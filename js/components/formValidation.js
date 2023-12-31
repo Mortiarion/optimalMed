@@ -43,6 +43,19 @@ inputEmail.addEventListener("input", (event) => {
     }
 });
 
+const numberSelected = document.querySelector(".number-selected");
+const dropdownSpeciality = document.querySelector(".dropdown-speciality");
+
+dropdownSpeciality.addEventListener("click", () => {
+    if (numberSelected && numberSelected.textContent.trim() !== "") {
+        dropdownSpeciality.classList.remove("invalid");
+        dropdownSpeciality.classList.add("valid");
+    } else {
+        dropdownSpeciality.classList.remove("invalid");
+        dropdownSpeciality.classList.add("valid");
+    }
+});
+
 const form = document.querySelector(".main__form");
 const formButton = document.querySelector(".form-btn");
 
@@ -73,6 +86,28 @@ form.addEventListener("submit", function (event) {
     } else {
         inputEmail.classList.remove("invalid");
     }
+
+    // if (isValid) {
+    //     dropdownSpeciality.classList.remove("invalid");
+    //     dropdownSpeciality.classList.add("valid");
+    // } else {
+    //     dropdownSpeciality.classList.remove("valid");
+    //     dropdownSpeciality.classList.add("invalid");
+    // }
+
+
+    // const numberSelected = document.querySelector(".number-selected");
+    // const dropdownSpeciality = document.querySelector(".dropdown-speciality");
+
+    // numberSelected.addEventListener("click", () => {
+    //     if (numberSelected && numberSelected.textContent.trim() !== "") {
+    //         dropdownSpeciality.classList.remove("invalid");
+    //         dropdownSpeciality.classList.add("valid");
+    //     } else {
+    //         dropdownSpeciality.classList.remove("invalid");
+    //         dropdownSpeciality.classList.add("valid");
+    //     }
+    // });
 
     if (!isValid) {
         event.preventDefault();
