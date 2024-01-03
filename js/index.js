@@ -15,27 +15,40 @@ const popupClose = document.querySelector(".popup-close");
 
 const toggleOverlay = () => {
     overlay.classList.toggle("active-overlay");
+    // disabledOrAnablesSroll();
 };
 
 const toggleDropdownList = () => {
     dropdownList.classList.toggle("active-dropdown-list");
+    disabledOrAnablesSroll();
+
 };
 
 const togglePopup = () => {
     popup.classList.toggle("active-popup");
+    // disabledOrAnablesSroll();
 }
 
 openPopup.forEach((element) => {
-    element.addEventListener("click", (event) => {
+    element.addEventListener("click", () => {
         // console.log(element);
-        const isElement = event.target === element;
+        // const isElement = event.target === element;
         // console.log(isElement);
         togglePopup();
         toggleOverlay();
+        disabledOrAnablesSroll();
         // if (isElement) {
         // }
     });
 });
+
+const disabledOrAnablesSroll = () => {
+    document.body.classList.toggle("no-scroll-drop-popup");
+}
+
+// const enableScroll = () => {
+//     document.body.classList.remove("");
+// }
 
 document.addEventListener("click", (event) => {
     const isDropdownSpeciality = event.target === dropdownSpeciality;
@@ -59,6 +72,7 @@ document.addEventListener("click", (event) => {
             // toggleDropdownList();
             togglePopup();
             toggleOverlay();
+            disabledOrAnablesSroll();
         } 
 
         if (dropdownList.classList.contains("active-dropdown-list")) {
