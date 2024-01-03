@@ -13,7 +13,7 @@ inputText.addEventListener("input", (event) => {
     }
 });
 
-const inputPhone = document.querySelector("input[type='phone']");
+const inputPhone = document.querySelector("input[type='tel']");
 
 inputPhone.addEventListener("input", (event) => {
     const inputValue = event.target.value.trim();
