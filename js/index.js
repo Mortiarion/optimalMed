@@ -78,6 +78,7 @@ document.addEventListener("click", (event) => {
         if (dropdownList.classList.contains("active-dropdown-list")) {
             toggleDropdownList();
             toggleOverlay();
+            
         }
         // else if (!popup.classList.contains("active-popup")) {
         //     toggleOverlay();
@@ -96,6 +97,7 @@ document.addEventListener("click", (event) => {
     if (isPopupClose) {
         togglePopup();
         toggleOverlay();
+        disabledOrAnablesSroll();
     }
 
     // if (
@@ -708,13 +710,16 @@ checkBoxContainers.forEach((container) => {
         //     const checkBox = container.querySelector("input[type='checkbox']");
         //     checkBox.checked = false;
         // });
-
+        console.log(selectButton);
 
         dropdownList.classList.remove("active-dropdown-list");
         overlay.classList.remove("active-overlay");
-
-        
-        updateSelectedCount();
+        // disabledOrAnablesSroll();
+        // document.body.classList.remove("no-sroll-drop-popup")
+        if (document.body.classList.contains("no-scroll-drop-popup")) {
+            disabledOrAnablesSroll();
+        }
+            updateSelectedCount();
     });
 });
 
@@ -731,7 +736,7 @@ const updateSelectedCount = () => {
     // Ваш елемент, де ви хочете відображати кількість вибраних елементів
     const selectedCountElement = document.querySelector(".number-selected");
     selectedCountElement.textContent = selectedText;
-    
+    // disabledOrAnablesSroll();
 }
 
 /**--------------------------------------------- */

@@ -61,6 +61,7 @@ const form = document.querySelector(".main__form");
 const formButton = document.querySelector(".form-btn");
 
 form.addEventListener("submit", function (event) {
+    disabledOrAnablesSroll();
     let isValid = true;
 
     const regexText = /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]+$/;
