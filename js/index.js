@@ -7,6 +7,11 @@ const overlay = document.querySelector(".overlay");
 const dropdownSpeciality = document.querySelector(".dropdown-speciality");
 const dropdownList = document.querySelector(".dropdown-list");
 const closeDropdown = document.querySelector(".close-dropdown");
+const openPopup = document.querySelectorAll(".open-popup");
+// console.log(openPopup);
+
+const popup = document.querySelector(".popup");
+const popupClose = document.querySelector(".popup-close");
 
 const toggleOverlay = () => {
     overlay.classList.toggle("active-overlay");
@@ -16,10 +21,29 @@ const toggleDropdownList = () => {
     dropdownList.classList.toggle("active-dropdown-list");
 };
 
+const togglePopup = () => {
+    popup.classList.toggle("active-popup");
+}
+
+openPopup.forEach((element) => {
+    element.addEventListener("click", (event) => {
+        // console.log(element);
+        const isElement = event.target === element;
+        // console.log(isElement);
+        togglePopup();
+        toggleOverlay();
+        // if (isElement) {
+        // }
+    });
+});
+
 document.addEventListener("click", (event) => {
     const isDropdownSpeciality = event.target === dropdownSpeciality;
     const isCloseDropdown = event.target === closeDropdown;
     const isOverlay = event.target === overlay;
+    const isOpenPopup = event.target === openPopup;
+    const isPopupClose = event.target === popupClose;
+
     if (isDropdownSpeciality) {
         toggleDropdownList();
         toggleOverlay();
@@ -31,9 +55,43 @@ document.addEventListener("click", (event) => {
     }
 
     if (isOverlay) {
-        toggleDropdownList();
+        if (popup.classList.contains("active-popup")) {
+            // toggleDropdownList();
+            togglePopup();
+            toggleOverlay();
+        } 
+
+        if (dropdownList.classList.contains("active-dropdown-list")) {
+            toggleDropdownList();
+            toggleOverlay();
+        }
+        // else if (!popup.classList.contains("active-popup")) {
+        //     toggleOverlay();
+        //     toggleDropdownList();
+
+        // }
+        // if (!dropdownList.classList.contains("active-dropdown-list")) {
+        //     togglePopup();
+        // }
+    }
+    
+    if (isOpenPopup) {
+        togglePopup();
+    }
+
+    if (isPopupClose) {
+        togglePopup();
         toggleOverlay();
     }
+
+    // if (
+    //     event.target.classList.contains("overlay") &&
+    //     !event.target.classList.contains("popup")
+    // ) {
+    //     togglePopup();
+    //     toggleOverlay();
+    // }
+
 });
 /**--------------------------------------------- */
 
@@ -629,25 +687,37 @@ checkBoxContainers.forEach((container) => {
     });
 
     selectButton.addEventListener("click", () => {
-        selectedItems.length = 0;
-        selectedSpecializations.textContent = "";
+        // selectedItems.length = 0;
+        // selectedSpecializations.textContent = "";
 
-        checkBoxContainers.forEach((container) => {
-            const checkBox = container.querySelector("input[type='checkbox']");
-            checkBox.checked = false;
-        });
+        // checkBoxContainers.forEach((container) => {
+        //     const checkBox = container.querySelector("input[type='checkbox']");
+        //     checkBox.checked = false;
+        // });
+
+
+        dropdownList.classList.remove("active-dropdown-list");
+        overlay.classList.remove("active-overlay");
+
         
         updateSelectedCount();
     });
 });
 
+
 const updateSelectedCount = () => {
     const count = selectedItems.length;
-    const selectedText = `выбрано ${count} специализаций`;
-
+    let selectedText = `выбрано ${count} специализаций`;
+    // if (selectedText === "") {
+    //     selectedText.textContent = "";
+    // }
+    if (count === 0) {
+        selectedText = ""; // робим пустим якщо кількість знову стає - 0 спеціалізацій
+    }
     // Ваш елемент, де ви хочете відображати кількість вибраних елементів
     const selectedCountElement = document.querySelector(".number-selected");
     selectedCountElement.textContent = selectedText;
+    
 }
 
 /**--------------------------------------------- */

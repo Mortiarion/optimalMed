@@ -65,7 +65,7 @@
                         предложение начала работы в Польше и планкарьеры
                         на 5 лет с нострификацией диплома.
                     </p>
-                    <button class="btn">Подать заявку</button>
+                    <button class="btn open-popup">Подать заявку</button>
                 </div>
                 <div class="header__box">
                     <div class="small__box media-one">
@@ -216,7 +216,7 @@
                                     (знание языка приветствуется)
                                 </p>
                             </div>
-                        <button class="btn">Подать заявку</button>
+                        <button class="btn open-popup">Подать заявку</button>
                     </div>
                 </div>
             </section>
@@ -353,7 +353,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="btn">Подать заявку</div>
+                        <button class="btn open-popup">Подать заявку</button>
                     </div>
                 </div>
             </section>
@@ -905,11 +905,11 @@
                                             <option value="72">Другое</option>
 										</select>
 									</div> -->
-									<div class="dropdown-speciality">
+									<button type="button" class="dropdown-speciality">
                                         <div class="speciality">Специализация врача * 
                                             <span class="number-selected"></span>
                                         </div>
-                                    </div>
+                                    </button>
                                     
                                     <textarea class="arena-text" name="area" id="area" cols="30" rows="10" placeholder="Впишите текст сообщения..."></textarea>
 									<button class="form-btn btn" type="submit">Отправлять</button>
@@ -1288,6 +1288,21 @@
                 </div>
             </div>
             <button id="select-button" class="btn">Выбрать</button>
+        </div>
+        <div class="popup">
+            <div class="popup-container">
+                <form class="popup-form" action="">
+                    <button class="popup-close">
+                        <img src="./img/close-btn-check-doctors.png" alt="close-btn">
+                    </button>
+                    <h4 class="popup-title">Отправить заявку</h4>
+                    <input type="text" name="name" id="" placeholder="Имя *" required>
+                    <input type="tel" name="tel" id="" placeholder="Телефон *" required>
+                    <input type="email" name="email" id="" placeholder="Email" required>
+                    <textarea name="" id="" cols="30" rows="7" placeholder="Впишите текст сообщения..."></textarea>
+                    <button class="popup-btn btn">Отправить</button>
+                </form>
+            </div>
         </div>
     </div>
     <script type="module" src="./js/index.js"></script>

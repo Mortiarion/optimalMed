@@ -46,15 +46,16 @@ inputEmail.addEventListener("input", (event) => {
 const numberSelected = document.querySelector(".number-selected");
 const dropdownSpeciality = document.querySelector(".dropdown-speciality");
 
-dropdownSpeciality.addEventListener("click", () => {
-    if (numberSelected && numberSelected.textContent.trim() !== "") {
-        dropdownSpeciality.classList.remove("invalid");
-        dropdownSpeciality.classList.add("valid");
-    } else {
-        dropdownSpeciality.classList.remove("invalid");
-        dropdownSpeciality.classList.add("valid");
-    }
-});
+// dropdownSpeciality.addEventListener("click", () => {
+//     if (numberSelected && numberSelected.textContent.trim() !== "") {
+//         dropdownSpeciality.classList.remove("invalid");
+//         dropdownSpeciality.classList.add("valid");
+//     } else {
+//         dropdownSpeciality.classList.remove("invalid");
+//         dropdownSpeciality.classList.add("valid");
+//         dropdownSpeciality.focus();
+//     }
+// });
 
 const form = document.querySelector(".main__form");
 const formButton = document.querySelector(".form-btn");
@@ -95,7 +96,6 @@ form.addEventListener("submit", function (event) {
     //     dropdownSpeciality.classList.add("invalid");
     // }
 
-
     // const numberSelected = document.querySelector(".number-selected");
     // const dropdownSpeciality = document.querySelector(".dropdown-speciality");
 
@@ -109,18 +109,38 @@ form.addEventListener("submit", function (event) {
     //     }
     // });
 
+    if (numberSelected.textContent.trim() === "") {
+        dropdownSpeciality.classList.add("invalid");
+        isValid = false;
+    } else {
+        dropdownSpeciality.classList.remove("invalid");
+    }
+
+    // let errorMessage = document.querySelector(".error-message");
+    // let isErrorMessageShown = false;
+
     if (!isValid) {
         event.preventDefault();
         const invalidFields = document.querySelectorAll(".invalid");
-        invalidFields[0].focus(); 
-        alert("Будь ласка, заповніть всі поля коректно.");
+        invalidFields[0].focus();
+
+        // if (!isErrorMessageShown) {
+        //     if (!errorMessage) {
+        //         errorMessage = document.createElement("div");
+        //         errorMessage.classList.add("error-message");
+        //         errorMessage.textContent = "Выберите специализацию";
+        //         dropdownSpeciality.appendChild(errorMessage);
+        //     }
+
+        //     isErrorMessageShown = true;
+
+        //     errorMessage.timerId = setTimeout(() => {
+        //         errorMessage.remove();
+        //         isErrorMessageShown = false;
+        //     }, 3000);
+        // }
     }
 });
-
-
-
-
-
 
 // const inputText = document.querySelector("input[type='text']");
 // const inputPhone = document.querySelector("input[type='phone']");
