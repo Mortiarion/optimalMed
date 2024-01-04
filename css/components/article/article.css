@@ -61,6 +61,9 @@
     font-weight: 600;
     line-height: 30px;
 }
+.employment__media h2 {
+    margin: 0 0 20px 0;
+}
 .article__work-poland span {
     color: var(--title-color-second);
     font-size: 30px;
@@ -78,7 +81,7 @@
     padding: 0;
 }
 .image__wrapper {
-    margin: 0 0 76px 0;
+    margin: 0 0 60px 0;
 }
 .employment {
 }
@@ -126,7 +129,7 @@
     line-height: 100%;
 }
 .employment__media {
-    margin: 0 0 60px 0;
+    /* margin: 0 0 60px 0; */
     color: var(--text-color-all);
     font-family: var(--second-fonts);
     font-size: 14px;
