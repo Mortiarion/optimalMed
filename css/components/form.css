@@ -189,8 +189,7 @@
     pointer-events: none;
 }
 
-.dropdown-speciality:after,
-.selected-specializations:after {
+.dropdown-speciality:after {
     position: absolute;
     content: "";
     top: 30px;

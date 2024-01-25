@@ -186,7 +186,7 @@ iframe {
     background-color: var(--white-color);
     border-radius: 20px;
     z-index: 10000;
-    padding: 40px;
+    padding: 20px 40px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -211,22 +211,22 @@ iframe {
 }
 
 .selected-specializations {
-    position: relative;
-    background-color: var(--white-color);
-    border-radius: 10px;
-    min-height: 54px;
-    width: 100%;
+    /* position: relative; */
+    /* background-color: var(--white-color); */
+    /* border-radius: 10px; */
+    /* min-height: 54px; */
+    /* width: 100%; */
     /* margin: 0 0 20px 0; */
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    font-family: var(--second-fonts);
-    font-size: 14px;
-    line-height: 14px;
-    cursor: pointer;
-    border: 1px solid rgba(85, 85, 85, 0.50);
+    /* display: flex; */
+    /* align-items: center; */
+    /* padding: 0 20px; */
+    /* font-family: var(--second-fonts); */
+    /* font-size: 14px; */
+    /* line-height: 14px; */
+    /* cursor: pointer; */
+    /* border: 1px solid rgba(85, 85, 85, 0.50); */
     /* gap: 10px; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .specialization-items input {
@@ -238,7 +238,7 @@ iframe {
 .specialization-items {
     display: flex;
     gap: 40px;
-    padding: 40px;
+    padding: 20px 40px 40px;
 }
 
 .item {
@@ -261,9 +261,9 @@ iframe {
     line-height: 32.2px;
 }
 
-.selected-specializations:after {
+/* .selected-specializations:after {
     top: 25px;
-}
+} */
 
 #select-button {
     margin: 0 auto;
@@ -278,19 +278,19 @@ iframe {
     pointer-events: none;
 }
 .checked-element {
-    border-radius: 10px;
-    background-color: #EBFBFC;
-    display: flex;
-    padding: 10px;
-    justify-content: center;
+    /* border-radius: 10px; */
+    /* background-color: #EBFBFC; */
+    /* display: flex; */
+    /* padding: 10px; */
+    /* justify-content: center; */
     /* align-items: center; */
     /* gap: 8px; */
-    white-space: nowrap;
-    margin: 5px;
-    color: var(--text-color-all);
-    font-family: var(--second-fonts);
-    font-size: 14px;
-    line-height: 14px;
+    /* white-space: nowrap; */
+    /* margin: 5px; */
+    /* color: var(--text-color-all); */
+    /* font-family: var(--second-fonts); */
+    /* font-size: 14px; */
+    /* line-height: 14px; */
 }
 
 .delete-btn {
@@ -301,8 +301,25 @@ iframe {
     font-weight: 700;
 }
 
+.dropdown-buttons {
+    display: flex;
+    gap: 20px;
+    /* width: 70%; */
+}
 
-
+#clear-btn {
+    background-color: var(--white-color);
+    color: var(--button-color);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 7px 0px rgba(0, 0, 0, 0.10), 0px 12px 12px 0px rgba(0, 0, 0, 0.09), 0px 27px 16px 0px rgba(0, 0, 0, 0.05), 0px 48px 19px 0px rgba(0, 0, 0, 0.01), 0px 75px 21px 0px rgba(0, 0, 0, 0.00);
+    margin: 0;
+    padding: 21px 118.5px;
+    width: 50%;
+}
+#select-button {
+    padding: 21px 152.4px;
+    width: 50%;
+    
+}
 
 
 

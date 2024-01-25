@@ -78,7 +78,7 @@
 .navigation__item a {
     color: var(--text-color-all);
     text-align: center;
-    font-size: 24px;
+    /* font-size: 24px; */
     font-weight: 700;
     line-height: 28px; 
     letter-spacing: -0.48px;

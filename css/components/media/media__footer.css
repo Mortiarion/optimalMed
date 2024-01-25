@@ -39,7 +39,7 @@
     .footer__col-3 ul {
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 25px;
     }
     .footer__col-3 ul > li {
         margin: 0;
