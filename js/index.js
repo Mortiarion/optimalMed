@@ -165,6 +165,23 @@ const updateSelectedCount = () => {
 
 /**--------------------------------------------- */
 
+window.onscroll = function () {
+    stickyMenu();
+};
+
+const stickMenu = document.getElementById("sticky-menu");
+const sticky = stickMenu.offsetTop;
+
+function stickyMenu() {
+    if (window.pageYOffset > sticky) {
+        stickMenu.classList.add("sticky");
+    } else {
+        stickMenu.classList.remove("sticky");
+    }
+}
+
+/**--------------------------------------------- */
+
 // let cards = document.getElementsByClassName("card");
 //   transforms = [
 //     { x: 0, z: 0, scale: 1, filter: "blur(0px)" },

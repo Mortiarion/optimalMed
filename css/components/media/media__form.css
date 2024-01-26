@@ -1,3 +1,12 @@
+@media (min-width: 320px) {
+    .dropdown-speciality {
+        display: none;
+    }
+    .dropdown-speciality-small {
+        display: flex;
+    }
+}
+
 @media (min-width: 375px) {
     .form .container {
         padding: 0;
@@ -57,5 +66,11 @@
     }
     .main__form {
         width: 580px;
+    }
+    .dropdown-speciality {
+        display: flex;
+    }
+    .dropdown-speciality-small {
+        display: none;
     }
 }

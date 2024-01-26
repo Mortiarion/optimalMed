@@ -170,7 +170,8 @@
     background-color: rgba(0, 0, 0, 0.1);
 } */
 
-.dropdown-speciality {
+.dropdown-speciality,
+.dropdown-speciality-small {
     position: relative;
     background-color: var(--white-color);
     border-radius: 10px;
@@ -185,11 +186,13 @@
     cursor: pointer;
     border: 1px solid rgba(85, 85, 85, 0.50);
 }
-.speciality {
+.speciality,
+.speciality-small {
     pointer-events: none;
 }
 
-.dropdown-speciality:after {
+.dropdown-speciality:after,
+.dropdown-speciality-small:after {
     position: absolute;
     content: "";
     top: 30px;
