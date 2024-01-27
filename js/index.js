@@ -2,6 +2,8 @@
 import "./components/burgerMenu.js";
 import "./components/navigationToSection.js";
 import "./components/formValidation.js";
+import "./components/drop-small-filter.js";
+
 
 const overlay = document.querySelector(".overlay");
 const dropdownSpeciality = document.querySelector(".dropdown-speciality");
@@ -48,6 +50,9 @@ const disabledOrAnablesSroll = () => {
 // const enableScroll = () => {
 //     document.body.classList.remove("");
 // }
+const dropdownSpecialitySmallFilter = document.querySelector(
+    ".dropdown-speciality-small-filter"
+);
 
 document.addEventListener("click", (event) => {
     const isDropdownSpeciality = event.target === dropdownSpeciality;
@@ -55,6 +60,7 @@ document.addEventListener("click", (event) => {
     const isOverlay = event.target === overlay;
     const isOpenPopup = event.target === openPopup;
     const isPopupClose = event.target === popupClose;
+    
 
     if (isDropdownSpeciality) {
         toggleDropdownList();
@@ -105,6 +111,7 @@ document.addEventListener("click", (event) => {
     //     togglePopup();
     //     toggleOverlay();
     // }
+
 });
 /**--------------------------------------------- */
 
@@ -123,6 +130,7 @@ clearButton.addEventListener("click", () => {
 });
 
 checkBoxContainers.forEach((container) => {
+    // console.log(container);
     const checkBox = container.querySelector("input[type='checkbox']");
 
     container.addEventListener("change", () => {
@@ -179,6 +187,8 @@ function stickyMenu() {
         stickMenu.classList.remove("sticky");
     }
 }
+
+/**--------------------------------------------- */
 
 /**--------------------------------------------- */
 

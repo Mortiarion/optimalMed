@@ -250,6 +250,8 @@ iframe {
 }
 
 .item label,
+.filter-container label,
+.filter-container input,
 .item input {
     display: flex;
     gap: 8px;
@@ -330,12 +332,14 @@ iframe {
 
 
 /* Сховати оригінальний чекбокс */
-.checkbox-container input {
+.checkbox-container input,
+.filter-container input {
     display: none;
 }
 
 /* Створення стилізованого чекбокса */
-.checkbox-container .checkmark {
+.checkbox-container .checkmark,
+.filter-container .checkmark{
     display: flex;
     position: relative;
     width: 14px;
@@ -345,7 +349,8 @@ iframe {
 }
 
 /* Стилізація вигляду "чекбокса" */
-.checkbox-container .checkmark::before {
+.checkbox-container .checkmark::before,
+.filter-container .checkmark::before {
     content: "";
     position: absolute;
     top: 0;
@@ -357,7 +362,8 @@ iframe {
 }
 
 /* Стилізація позначки "галочки" */
-.checkbox-container input:checked ~ .checkmark::after {
+.checkbox-container input:checked ~ .checkmark::after,
+.filter-container input:checked ~ .checkmark::after{
     content: "";
     position: absolute;
     top: 0;
@@ -391,7 +397,7 @@ iframe {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 100px;
+    padding: 30px 100px;
     z-index: 10000;
 }
 .active-popup {

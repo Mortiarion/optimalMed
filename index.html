@@ -1307,8 +1307,284 @@
                     <input type="text" name="name" id="text" placeholder="Имя *" required>
                     <input type="tel" name="tel" id="tel" placeholder="Телефон *" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
+                    <button type="button" class="dropdown-speciality-small-popup">
+                        <span class="speciality-small">Специализация врача * 
+                            <span class="number-selected-small-filter"></span>
+                        </span>
+                    </button>
+                    <div class="dropdown-speciality-small-filter">
+                            <div class="filter-input">
+                                <input type="text">
+                            </div>
+                            <div class="filter-container">
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="allergist">
+                                    <span class="checkmark"></span>Аллерголог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="andrologist">
+                                    <span class="checkmark"></span>Андролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="anesthesiologist">
+                                    <span class="checkmark"></span>Анестезіолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="obstetrician-gynecologist">
+                                    <span class="checkmark"></span>Акушер - гинеколог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="virologist">
+                                    <span class="checkmark"></span>Вирусолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="general-practitioner">
+                                    <span class="checkmark"></span>Врач без специализации
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="gastroenterologist">
+                                    <span class="checkmark"></span>Гастроэнтеролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="hematologist">
+                                    <span class="checkmark"></span>Гематолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="allergist">
+                                    <span class="checkmark"></span>Генетик
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="geriatrician">
+                                    <span class="checkmark"></span>Гериатр
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="dermatologist">
+                                    <span class="checkmark"></span>Дерматолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-anesthesiologist">
+                                    <span class="checkmark"></span>Детский анестезіолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-gynecologist">
+                                    <span class="checkmark"></span>Детский гинеколог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-gastroenterologist">
+                                    <span class="checkmark"></span>Детский гастроэнтеролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-dermatologist">
+                                    <span class="checkmark"></span>Детский дерматолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-cardiologist">
+                                    <span class="checkmark"></span>Детский кардіолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-neurologist">
+                                    <span class="checkmark"></span>Детский невролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-otorhinolaryngologist">
+                                    <span class="checkmark"></span>Детский отоларинголог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-traumatologist-orthopedist">
+                                    <span class="checkmark"></span>Детский травматолог - ортопед
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-surgeon">
+                                    <span class="checkmark"></span>Детский хирург
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-pulmonologist">
+                                    <span class="checkmark"></span>Детский пульмонолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-nephrologist">
+                                    <span class="checkmark"></span>Детский нефролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-urologist">
+                                    <span class="checkmark"></span>Детский уролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatric-endocrinologist">
+                                    <span class="checkmark"></span>Детский эндокринолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="immunologist">
+                                    <span class="checkmark"></span>Иммунолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="infectious-disease-specialist">
+                                    <span class="checkmark"></span>Инфекционист
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="cardiologist">
+                                    <span class="checkmark"></span>Кардиолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="cardiovascular-surgeon">
+                                    <span class="checkmark"></span>Кардіохірург
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="laboratory-diagnostician">
+                                    <span class="checkmark"></span>Лабораторная диагностика
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="mammologist">
+                                    <span class="checkmark"></span>Маммолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="narcologist">
+                                    <span class="checkmark"></span>Нарколог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="neurologist">
+                                    <span class="checkmark"></span>Невролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="neurosurgeon">
+                                    <span class="checkmark"></span>Нейрохірург
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="neonatologist">
+                                    <span class="checkmark"></span>Неонатолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="emergency-medicine">
+                                    <span class="checkmark"></span>Неотложные состояния
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="nephrologist">
+                                    <span class="checkmark"></span>Нефролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="oncologist">
+                                    <span class="checkmark"></span>Онколог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="otolaryngologist">
+                                    <span class="checkmark"></span>Отоларинголог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="ophthalmologist">
+                                    <span class="checkmark"></span>Офтальмолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pathologist">
+                                    <span class="checkmark"></span>Патологоанатом
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pediatrician">
+                                    <span class="checkmark"></span>Педиатр
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="proctologist">
+                                    <span class="checkmark"></span>Проктолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="pulmonologist">
+                                    <span class="checkmark"></span>Пульмонолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="psychiatrist">
+                                    <span class="checkmark"></span>Психиатр
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="radiologist">
+                                    <span class="checkmark"></span>Радиолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="rehabilitation-specialist">
+                                    <span class="checkmark"></span>Реабилитолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="forensic-medical-expert">
+                                    <span class="checkmark"></span>Судебно-медицинский эксперт
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="vascular-surgeon">
+                                    <span class="checkmark"></span>Сосудистый хирург
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="dentist">
+                                    <span class="checkmark"></span>Стоматолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="rheumatologist">
+                                    <span class="checkmark"></span>Ревматолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="traumatologist-orthopedist">
+                                    <span class="checkmark"></span>Травматолог - ортопед
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="therapist">
+                                    <span class="checkmark"></span>Терапевт
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="toxicologist">
+                                    <span class="checkmark"></span>Токсиколог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="transfusiologist">
+                                    <span class="checkmark"></span>Трансфузиолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="ultrasound-diagnostician">
+                                    <span class="checkmark"></span>Ультразвуковая диагностика
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="urologist">
+                                    <span class="checkmark"></span>Уролог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="phoniatrist">
+                                    <span class="checkmark"></span>Фониатр
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="phthisiatrist">
+                                    <span class="checkmark"></span>Фтизиатр
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="chemotherapist">
+                                    <span class="checkmark"></span>Химиотерапевт
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="general-surgeon">
+                                    <span class="checkmark"></span>Хирург общий
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="oncological-surgeon">
+                                    <span class="checkmark"></span>Хирург онколог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="plastic-surgeon">
+                                    <span class="checkmark"></span>Хирург пластический
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="endocrinologist">
+                                    <span class="checkmark"></span>Эндокринолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="endoscopist">
+                                    <span class="checkmark"></span>Эндоскопия
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="epidemiologist">
+                                    <span class="checkmark"></span>Эпидемиолог
+                                </label>
+                                <label class="checkbox-container-filter">
+                                    <input type="checkbox" name="specialization" value="other">
+                                    <span class="checkmark"></span>Другое
+                                </label>
+                            </div>
+                        </div>
                     <textarea name="arena" cols="30" rows="7" placeholder="Впишите текст сообщения..."></textarea>
-                    <button class="popup-btn btn">Отправить</button>
+                    <button type="submit" class="popup-btn btn">Отправить</button>
                 </form>
             </div>
         </div>

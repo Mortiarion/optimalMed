@@ -116,3 +116,39 @@ const updateSelectedCount = () => {
     selectedCountElement.textContent = selectedText;
     // disabledOrAnablesSroll();
 };
+
+
+
+
+
+
+
+
+
+
+    // Отримуємо посилання на елементи DOM
+    var popup = document.querySelector('.dropdown-speciality-small-popup');
+    var filter = document.querySelector('.dropdown-speciality-small-filter');
+    var input = filter.querySelector('input[type="text"]');
+    var labels = filter.querySelectorAll('.checkbox-container-filter');
+
+    // Додаємо подію кліку на popup
+    popup.addEventListener('click', function() {
+        filter.classList.toggle('show'); // Перемикаємо клас show, який показує або приховує filter
+    });
+
+    // Додаємо подію вводу тексту в input
+    input.addEventListener('input', function() {
+        var searchText = input.value.trim().toLowerCase(); // Отримуємо введений текст, видаляємо пробіли на початку і в кінці, і перетворюємо його на нижній регістр
+
+        labels.forEach(function(label) {
+            var labelText = label.textContent.trim().toLowerCase(); // Отримуємо текст label, видаляємо пробіли на початку і в кінці, і перетворюємо його на нижній регістр
+
+            // Перевіряємо, чи містить labelText введений текст. Якщо так, показуємо label, інакше ховаємо.
+            if (labelText.includes(searchText)) {
+                label.style.display = 'block';
+            } else {
+                label.style.display = 'none';
+            }
+        });
+    });
