@@ -37,10 +37,11 @@
     margin: 0 20px 0 0;
 }
 
-.additional__image img {
+.additional__image  {
     background-color: var(--white-color);
     padding: 7px 22px;
     border-radius: 60px;
+    display: flex;
 }
 
 .additional__block-1 .text {

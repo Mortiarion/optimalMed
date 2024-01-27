@@ -2,12 +2,17 @@
     margin: 0 0 40px 0;
 }
 
+.logo {
+    margin: 0 0 0 32px;
+}
+
 .header .container {
     background-color: var(--background-color);
     padding: 20px 17px 0 18px;
-    background-image: url("./../../img/doctor-women.png");
+    background-image: url("./../../img/main-page-img/doctor-women-375.png");
     background-repeat: no-repeat;
     background-position: 100% 100%;
+    background-size: 250px 410px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -131,7 +136,7 @@
     font-family: var(--second-fonts);
     font-size: 14px;
     line-height: 21px; 
-    margin: 0 0 32px 0;
+    margin: 0 0 24px 0;
 }
 
 .btn {
@@ -144,7 +149,7 @@
     font-weight: 700;
     line-height: 28px;
     margin: 0 auto 30px auto;
-    width: fit-content;
+    width: 100%;
     white-space: nowrap;
 }
 

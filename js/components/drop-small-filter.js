@@ -54,10 +54,10 @@ labels.forEach(function (label) {
     checkbox.addEventListener("change", updateSelectedCount);
 });
 
-document.addEventListener("click", (event) => {
-    const isPopupSmall = popupSmall.contains(event.target);
+// document.addEventListener("click", (event) => {
+//     const isPopupSmall = popupSmall.contains(event.target);
 
-    if (!isPopupSmall && filter.classList.contains("open-popup-small")) {
-        closePopupSmall();
-    }
-});
+//     if (!isPopupSmall && filter.classList.contains("open-popup-small")) {
+//         closePopupSmall();
+//     }
+// });
