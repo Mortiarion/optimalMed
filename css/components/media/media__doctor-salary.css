@@ -18,26 +18,49 @@
     }
     .salary-img-two {
         display: block;
-        height: 300px;
+        height: 100%;
+        width: 212px;
     }
     .salary__media-wrapper {
         display: flex;
         justify-content: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 30px;
     }
     .salary__media-box {
-        width: 400px;
+        /* width: 400px; */
     }
     .doctor__salary-img {
-        margin: 0 20px 0 0;
+        margin: 0;
     }
     .doctor__salary-footer {
         justify-content: flex-end;
     }
     .doctor__salary .container {
-        padding: 0 50px;
+        padding: 0 30px;
     }
     .doctor__salary-title {
-        text-align: center;
+        text-align: left;
+        width: 75%;
+    }
+    .footer-sal-inner {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .small-scr {
+        display: none;
+    }
+    .doctor__salary-text {
+        margin: 0 0 20px 0;
+    }
+    .salary__none {
+        display: block;
+        font-size: 14px;
+        line-height: 21px;
+        font-family: var(--second-fonts);
+        color: var(--text-color-all);
+        margin: 0 0 20px 0;
     }
 }
 @media (min-width: 1024px) {

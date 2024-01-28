@@ -1,3 +1,19 @@
+@media (min-width: 768px) {
+    .additional__wrapper {
+        display: flex;
+        gap: 40px;
+    }
+    .additional__image {
+        margin: 0 10px 0 0;
+    }
+    .additional__block-1 .text {
+        text-align: left;
+        font-weight: 600;
+    }
+    .additional__item {
+        margin: 0 0 40px 0;
+    }
+}
 @media (min-width: 1024px) {
     .additional .container {
         padding: 0 51px 0 52px;

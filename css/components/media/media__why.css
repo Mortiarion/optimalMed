@@ -15,9 +15,19 @@
     }
     .why .title,
     .why .title span {
-        font-size: 58px;
+        font-size: 42px;
+        text-align: left;
         font-weight: 600;
-        line-height: 58px;
+        line-height: 42px;
+    }
+    .why__content .title {
+        margin: 0 0 82px 0;
+    }
+    .why .why__wrapper-inner .text {
+        margin: 0;
+    }
+    .why__wrapper-inner {
+        margin: 0 0 40px 0;
     }
     .badge {
         width: 334px;
@@ -56,6 +66,38 @@
         font-weight: 600;
         line-height: normal;
         letter-spacing: -0.36px;
+    }
+    .requierements .requierements__wrapper {
+        display: grid;
+        /* padding: 99px 32px 115px 34px; */
+        padding: 60px 16px 80px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 60px;
+        align-items: end;
+        background-image: url(./../../../img/doctor-men-1024.png);
+        background-size: 232px 249px;
+        margin: 0 0 70px 0;
+    }
+    .requierements .requierements__wrapper .title,
+    .requierements .requierements__wrapper .title span {
+        font-size: 28px;
+        line-height: 28px;
+        margin: 0 0 35px 0;
+    }
+    .requierements .requierements__title {
+        font-size: 14px;
+    }
+    .requierements .requierements__wrapper .btn {
+        margin: 0;
+        padding: 12px 0px;
+        width: 170px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .requierements__wrapper .requierements__content {
+        margin: 0;
+        width: 210px;
     }
 }
 
