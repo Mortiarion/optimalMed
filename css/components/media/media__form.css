@@ -81,6 +81,16 @@
     .fb-col-2 {
         width: 43%;
     }
+    .flex-box {
+        flex-direction: row;
+    }
+    .form iframe {
+        width: 438px;
+        height: 305px;
+    }
+    .form {
+        margin-bottom: 80px;
+    }
 }
 
 @media (min-width: 1440px) {

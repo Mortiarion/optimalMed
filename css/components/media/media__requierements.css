@@ -1,3 +1,40 @@
+@media (min-width: 768px) {
+    .requierements .requierements__wrapper {
+        display: grid;
+        /* padding: 99px 32px 115px 34px; */
+        padding: 60px 16px 80px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 60px;
+        align-items: end;
+        background-image: url(./../../../img/doctor-men-1024.png);
+        background-size: 232px 249px;
+        margin: 0 0 70px 0;
+    }
+    .requierements .title {
+        font-size: 28px;
+        line-height: 28px;
+        margin: 0 0 35px 0;
+    }
+    .requierements .requierements__title {
+        font-size: 14px;
+    }
+    .requierements .requierements__wrapper .btn {
+        margin: 0;
+        padding: 12px 0px;
+        width: 170px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .requierements__wrapper .requierements__content {
+        margin: 0;
+        width: 210px;
+    }
+    .requierements .requierements__title {
+        font-size: 16px;
+    }
+}
+
 @media (min-width: 1024px) {
     .requierements__wrapper {
         display: grid;
@@ -11,34 +48,67 @@
         margin: 0 0 60px 0;
     }
     .requierements .container {
-        padding: 90px 20px 0 20px;
+        padding: 0 20px 0 20px;
     }
     .requierements .btn {
         margin: 0;
         height: 70px;
     }
-    .requierements__content {
-        margin: 0;
+    .requierements .requierements__wrapper {
+        align-items: start;
+        padding: 100px 34px 115px;
+        grid-column-gap: 38px;
+        grid-row-gap: 99px;
+        background-size: 301px 324px;
     }
-    .requierements .title  {
+    .requierements .requierements__content {
         margin: 0;
+        width: 100%;
+    }
+    .requierements .title {
+        /* margin: 0; */
         font-size: 38px;
         line-height: 38px;
+    }
+    .requierements {
+        padding: 200px 0 1px;
+        transform: translateY(-180px);
+        margin-bottom: -180px;
+        background: linear-gradient(
+            180deg,
+            rgba(172, 230, 234, 0) -3%,
+            #ace6ea 100%
+        );
+    }
+    .requierements .requierements__wrapper .btn {
+        width: 227px;
+        margin-top: auto;
+    }
+    .additional__block-1 .text {
+        font-size: 16px;
     }
 }
 
 @media (min-width: 1440px) {
-    .requierements__wrapper {
+    .requierements .requierements__wrapper {
         padding: 99px 211px 97px 110px;
         grid-column-gap: 120px;
         grid-row-gap: 131px;
+        margin: 0;
     }
     .requierements .container {
         max-width: 1400px;
     }
     .requierements {
-        background: linear-gradient(180deg, rgba(172, 230, 234, 0.00) 0%, #ACE6EA 100%);
-        padding: 0 0 1px 0;
+        /* background: linear-gradient(
+            180deg,
+            rgba(172, 230, 234, 0) 0%,
+            #ace6ea 100%
+        ); */
+        /* padding: 150px 0 1px; */
+        padding: 200px 0 1px;
+        transform: translateY(-240px);
+        margin-bottom: -241px;
     }
     .requierements__wrapper {
         margin: 0;
