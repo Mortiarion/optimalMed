@@ -16,6 +16,10 @@
     color: var(--title-color-second);
 }
 
+.scheme__wrapper-inner .btn {
+    display: none;
+}
+
 .scheme__content {
     display: flex;
     margin: 0 0 30px 0;
