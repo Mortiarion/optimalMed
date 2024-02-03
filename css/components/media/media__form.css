@@ -1,7 +1,9 @@
 @media (min-width: 320px) {
-    .dropdown-speciality {
+    .selected-label,
+    .main-form-box.drop-big {
         display: none;
     }
+    main-form-box drop-big
     .dropdown-speciality-small {
         display: flex;
     }
@@ -31,7 +33,7 @@
     }
     .form .container {
         padding: 0 20px;
-        margin: 0;
+        /* margin: 0; */
     }
     .form__box {
         display: flex;
@@ -105,8 +107,10 @@
     .main__form {
         width: 580px;
     }
-    .dropdown-speciality {
+    .selected-label,
+    .main-form-box.drop-big{
         display: flex;
+        width: 100%;
     }
     .dropdown-speciality-small {
         display: none;

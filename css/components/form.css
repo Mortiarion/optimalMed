@@ -84,14 +84,16 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .main__form input {
-    margin: 0 0 20px 0;
+    /* margin: 0 0 20px 0; */
     height: 64px;
+    width: 100%;
     border-radius: 10px;
     padding: 0 28px;
-    border: 1px solid rgba(85, 85, 85, 0.50);
+    border: 1px solid rgba(85, 85, 85, 0.5);
 }
 
 .form__col-2 .title {
@@ -102,12 +104,6 @@
     line-height: normal;
     margin: 20px 0;
 }
-
-
-
-
-
-
 
 /* 
 .custom-select {
@@ -194,7 +190,7 @@
     background-color: var(--white-color);
     border-radius: 10px;
     height: 64px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     display: flex;
     align-items: center;
     padding: 0 28px;
@@ -202,12 +198,18 @@
     font-size: 14px;
     line-height: 14px;
     cursor: pointer;
-    border: 1px solid rgba(85, 85, 85, 0.50);
+    border: 1px solid rgba(85, 85, 85, 0.5);
+}
+.speciality {
+    position: absolute;
+    top: 40%;
+    left: 5%;
 }
 .speciality,
 .speciality-small {
     pointer-events: none;
 }
+
 
 .dropdown-speciality:after,
 .dropdown-speciality-small:after,
@@ -230,24 +232,21 @@
     line-height: 14px;
 }
 
-
-
 .error-message {
     font-weight: 700;
     font-size: 18px;
     pointer-events: none;
 }
 
-
-
-
-
-
-
 .dropdown-speciality-small-filter {
     border-radius: 10px;
-    border: 1px solid rgba(85, 85, 85, 0.50);
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 7px 0px rgba(0, 0, 0, 0.10), 0px 12px 12px 0px rgba(0, 0, 0, 0.09), 0px 27px 16px 0px rgba(0, 0, 0, 0.05), 0px 48px 19px 0px rgba(0, 0, 0, 0.01), 0px 75px 21px 0px rgba(0, 0, 0, 0.00);
+    border: 1px solid rgba(85, 85, 85, 0.5);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+        0px 3px 7px 0px rgba(0, 0, 0, 0.1),
+        0px 12px 12px 0px rgba(0, 0, 0, 0.09),
+        0px 27px 16px 0px rgba(0, 0, 0, 0.05),
+        0px 48px 19px 0px rgba(0, 0, 0, 0.01),
+        0px 75px 21px 0px rgba(0, 0, 0, 0);
     height: 310px;
     overflow-y: hidden;
     position: absolute;
@@ -271,7 +270,7 @@
 
 .filter-input {
     border-radius: 10px 10px 0px 0px;
-    background-color: #F9FAFB;
+    background-color: #f9fafb;
     padding: 20px 8px;
     width: 580px;
     /* position: fixed; */
@@ -283,12 +282,11 @@
 
 .dropdown-speciality-small-filter .filter-input input {
     border-radius: 10px;
-    border: 1px solid rgba(85, 85, 85, 0.50);
+    border: 1px solid rgba(85, 85, 85, 0.5);
     width: 100%;
 }
 
 .filter-wrapper {
-
 }
 
 .filter-container {
@@ -302,4 +300,26 @@
     display: flex;
 }
 
+.main-form-box {
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    border: 1px solid transparent;
+}
 
+.error-label {
+    color: red;
+    background-color: var(--white-color);
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    /* transform: translateY(-50%); */
+    /* white-space: nowrap; */
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.main-form-box.error {
+    border: 1px solid red;
+    border-radius: 11px;
+}

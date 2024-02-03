@@ -1,222 +1,85 @@
-const inputText = document.querySelector("input[type='text");
+function validation(form) {
+    function removeError(input) {
+        const parent = input.parentNode;
 
-inputText.addEventListener("input", (event) => {
-    const inputValue = event.target.value.trim();
-    const regex = /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]+$/;
-
-    if (!regex.test(inputValue)) {
-        inputText.classList.remove("valid");
-        inputText.classList.add("invalid");
-    } else {
-        inputText.classList.remove("invalid");
-        inputText.classList.add("valid");
-    }
-});
-
-const inputPhone = document.querySelector("input[type='tel']");
-
-inputPhone.addEventListener("input", (event) => {
-    const inputValue = event.target.value.trim();
-    const regex = /^\d+$/;
-
-    if (!regex.test(inputValue)) {
-        inputPhone.classList.remove("valid");
-        inputPhone.classList.add("invalid");
-    } else {
-        inputPhone.classList.remove("invalid");
-        inputPhone.classList.add("valid");
-    }
-});
-
-const inputEmail = document.querySelector("input[type='email']");
-
-inputEmail.addEventListener("input", (event) => {
-    const inputValue = event.target.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(inputValue)) {
-        inputEmail.classList.remove("invalid");
-        inputEmail.classList.add("valid");
-    } else {
-        inputEmail.classList.remove("invalid");
-        inputEmail.classList.add("valid");
-    }
-});
-
-const numberSelected = document.querySelector(".number-selected");
-const dropdownSpeciality = document.querySelector(".dropdown-speciality");
-
-// dropdownSpeciality.addEventListener("click", () => {
-//     if (numberSelected && numberSelected.textContent.trim() !== "") {
-//         dropdownSpeciality.classList.remove("invalid");
-//         dropdownSpeciality.classList.add("valid");
-//     } else {
-//         dropdownSpeciality.classList.remove("invalid");
-//         dropdownSpeciality.classList.add("valid");
-//         dropdownSpeciality.focus();
-//     }
-// });
-
-const form = document.querySelector(".main__form");
-const formButton = document.querySelector(".form-btn");
-
-form.addEventListener("submit", function (event) {
-    disabledOrAnablesSroll();
-    let isValid = true;
-
-    const regexText = /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]+$/;
-    const regexPhone = /^\d+$/;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!regexText.test(inputText.value.trim())) {
-        inputText.classList.add("invalid");
-        isValid = false;
-    } else {
-        inputText.classList.remove("invalid");
+        if (parent.classList.contains("error")) {
+            parent.querySelector(".error-label").remove();
+            parent.classList.remove("error");
+        }
     }
 
-    if (!regexPhone.test(inputPhone.value.trim())) {
-        inputPhone.classList.add("invalid");
-        isValid = false;
-    } else {
-        inputPhone.classList.remove("invalid");
+    function createError(input, text) {
+        const parent = input.parentNode;
+        const errorLabel = document.createElement("label");
+
+        errorLabel.classList.add("error-label");
+        errorLabel.textContent = text;
+        parent.classList.add("error");
+
+        parent.append(errorLabel);
     }
 
-    if (!emailPattern.test(inputEmail.value.trim())) {
-        inputEmail.classList.add("invalid");
-        isValid = false;
-    } else {
-        inputEmail.classList.remove("invalid");
+    let result = true;
+
+    const allInputs = form.querySelectorAll("input");
+
+    for (const input of allInputs) {
+        removeError(input);
+
+        if (input.dataset.required === "letter") {
+            if (input.value === "") {
+                console.log("errorrrr");
+                createError(input, "Вводите только буквы");
+                result = false;
+            }
+        }
+
+        if (input.dataset.required === "number") {
+            if (!input.value.match(/^\d{10}$/)) {
+                console.log("errorrrr");
+                createError(
+                    input,
+                    "Введите корректный номер телефона!(0687623820)"
+                );
+                result = false;
+            }
+        }
+
+        if (input.dataset.required === "email") {
+            if (!input.value.match(/^\S+@\S+\.\S+$/)) {
+                console.log("errorrrr");
+                createError(input, "Введите корректный email (some@email.net)");
+                result = false;
+            }
+        }
+
+        if (input.dataset.required === "select") {
+            const numberSelected = document.querySelector(".number-selected");
+
+            if (numberSelected.textContent === "") {
+                createError(input, "Выберите специализацию!");
+                result = false;
+            }
+        }
+
+        if (!result) {
+            const firstErrorInput =
+                form.querySelector(".error-label").previousElementSibling;
+            firstErrorInput.focus();
+        }
     }
 
-    // if (isValid) {
-    //     dropdownSpeciality.classList.remove("invalid");
-    //     dropdownSpeciality.classList.add("valid");
-    // } else {
-    //     dropdownSpeciality.classList.remove("valid");
-    //     dropdownSpeciality.classList.add("invalid");
-    // }
+    return result;
+}
 
-    // const numberSelected = document.querySelector(".number-selected");
-    // const dropdownSpeciality = document.querySelector(".dropdown-speciality");
-
-    // numberSelected.addEventListener("click", () => {
-    //     if (numberSelected && numberSelected.textContent.trim() !== "") {
-    //         dropdownSpeciality.classList.remove("invalid");
-    //         dropdownSpeciality.classList.add("valid");
-    //     } else {
-    //         dropdownSpeciality.classList.remove("invalid");
-    //         dropdownSpeciality.classList.add("valid");
-    //     }
-    // });
-
-    if (numberSelected.textContent.trim() === "") {
-        dropdownSpeciality.classList.add("invalid");
-        isValid = false;
-    } else {
-        dropdownSpeciality.classList.remove("invalid");
-    }
-
-    // let errorMessage = document.querySelector(".error-message");
-    // let isErrorMessageShown = false;
-
-    if (!isValid) {
+document
+    .querySelector(".main__form")
+    .addEventListener("submit", function (event) {
         event.preventDefault();
-        const invalidFields = document.querySelectorAll(".invalid");
-        invalidFields[0].focus();
 
-        // if (!isErrorMessageShown) {
-        //     if (!errorMessage) {
-        //         errorMessage = document.createElement("div");
-        //         errorMessage.classList.add("error-message");
-        //         errorMessage.textContent = "Выберите специализацию";
-        //         dropdownSpeciality.appendChild(errorMessage);
-        //     }
+        if (validation(this) == true) {
+            alert("Форма провірена успішно!");
 
-        //     isErrorMessageShown = true;
-
-        //     errorMessage.timerId = setTimeout(() => {
-        //         errorMessage.remove();
-        //         isErrorMessageShown = false;
-        //     }, 3000);
-        // }
-    }
-});
-
-// const inputText = document.querySelector("input[type='text']");
-// const inputPhone = document.querySelector("input[type='phone']");
-// const inputEmail = document.querySelector("input[type='email']");
-// const form = document.querySelector(".main__form");
-// const formButton = document.querySelector(".form-btn");
-// const specializationSelect = document.getElementById("specialization");
-// const specializationTooltip = document.getElementById("specializationTooltip");
-
-// inputText.addEventListener("input", validateInput);
-// inputPhone.addEventListener("input", validateInput);
-// inputEmail.addEventListener("input", validateInput);
-
-// form.addEventListener("submit", validateForm);
-
-// function validateInput(event) {
-//     const inputValue = event.target.value.trim();
-//     const inputType = event.target.getAttribute("type");
-//     const regexText = /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]+$/;
-//     const regexPhone = /^\d+$/;
-//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-//     let isValid = true;
-
-//     switch (inputType) {
-//         case "text":
-//             isValid = regexText.test(inputValue);
-//             break;
-//         case "tel":
-//             isValid = regexPhone.test(inputValue);
-//             break;
-//         case "email":
-//             isValid = emailPattern.test(inputValue);
-//             break;
-//         default:
-//             break;
-//     }
-
-//     if (isValid) {
-//         event.target.classList.remove("invalid");
-//         event.target.classList.add("valid");
-//     } else {
-//         event.target.classList.remove("valid");
-//         event.target.classList.add("invalid");
-//     }
-// }
-
-// function validateForm(event) {
-//     let isFormValid = true;
-
-//     const formInputs = [inputText, inputPhone, inputEmail];
-//     formInputs.forEach((input) => {
-//         validateInput({ target: input });
-
-//         if (input.classList.contains("invalid")) {
-//             isFormValid = false;
-//         }
-//     });
-
-//     if (specializationSelect.value === "0") {
-//         event.preventDefault();
-//         specializationTooltip.style.display = "block";
-
-//         setTimeout(() => {
-//             specializationTooltip.style.display = "none";
-//         }, 3000);
-//     }
-
-//     if (!isFormValid) {
-//         event.preventDefault();
-//         const invalidFields = document.querySelectorAll(".invalid");
-//         invalidFields[0].focus();
-//         alert("Будь ласка, заповніть всі поля коректно.");
-//     } else {
-//         // Якщо всі поля валідні та відправлення відбулося успішно, очистити поля
-//         form.reset();
-//     }
-// }
+            return false;
+        }
+    });

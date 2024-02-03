@@ -273,7 +273,7 @@
         font-weight: 700;
         line-height: 28px;
         letter-spacing: -0.28px;
-        margin-left: auto;
+        /* margin-left: auto; */
     }
     .media__wrapper .title {
         width: 100%;
@@ -296,9 +296,11 @@
     .header .container .navigation .navigation__list {
         display: flex;
         margin-left: auto;
+        white-space: nowrap;
     }
     .header .container .navigation .navigation__list .navigation__item {
         margin: 0;
+        /* display: flex; */
     }
     .header .container .navigation .navigation__list .navigation__item a:after {
         content: "";
@@ -367,7 +369,11 @@
         margin-left: 27px;
     }
     .sticky {
-        left: 80px;
-        right: 80px;
+        left: auto;
+        right: auto;
+        width: 1280px;
     }
+    /* .navigation__list {
+        margin-left: auto;
+    } */
 }
