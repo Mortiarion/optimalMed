@@ -45,8 +45,10 @@ function updateSelectedCount() {
         ".number-selected-small-filter"
     );
     numberSelected.textContent = `вибрано ${selectedCount}`;
-    numberSelected = selectedCount > 0 ? `вибрано ${selectedCount}` : " ";
-    console.log(numberSelected);
+    // numberSelected = selectedCount > 0 ? `вибрано ${selectedCount}` : "";
+    if (selectedCount === 0) {
+        numberSelected.textContent = "";
+    }
 }
 
 labels.forEach(function (label) {

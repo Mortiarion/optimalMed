@@ -3,6 +3,7 @@ import "./components/burgerMenu.js";
 import "./components/navigationToSection.js";
 import "./components/formValidation.js";
 import "./components/drop-small-filter.js";
+import "./components/drop-small-filter-main.js";
 
 
 const overlay = document.querySelector(".overlay");

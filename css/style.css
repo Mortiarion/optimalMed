@@ -46,6 +46,7 @@
     --background-color: #ACE6EA;
     --background-color-bg3: rgb(173, 231, 235, 0.3);
     --button-color: #461DBA;
+    --hover-btn: #3f1aa5;
     --white-color: #ffffff;
     --background-color-transparent: rgba(255, 255, 255, 0.90);
     --main-fonts: 'Montserrat', sans-serif;
@@ -426,6 +427,7 @@ picture {
 .popup-form textarea {
     border-radius: 10px;
     border: 1px solid rgba(85, 85, 85, 0.50);
+    width: 100%;
 }
 .popup-form textarea {
     padding: 28px;

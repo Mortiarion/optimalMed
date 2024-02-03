@@ -161,6 +161,11 @@
     margin: 0 auto 30px auto;
     width: 100%;
     white-space: nowrap;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hover-btn);
 }
 
 .header__box {
