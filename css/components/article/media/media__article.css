@@ -2,6 +2,13 @@
     .img-one {
         width: 100%;
     }
+    .article__work-poland span,
+    .article__work-poland span h2 {
+        text-align: left;
+    }
+    .employment__title {
+        text-align: left;
+    }
 }
 
 @media (min-width: 1024px) {

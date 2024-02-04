@@ -39,19 +39,19 @@
 
 :root {
     --text-color-all: #080808;
-    --title-color-second: #0FA4AE;
-    --breadcrumbs: #3BA9B2;
-    --bg-testimonials: #ACE6EA;
+    --title-color-second: #0fa4ae;
+    --breadcrumbs: #3ba9b2;
+    --bg-testimonials: #ace6ea;
     --subtitle-color: #555555;
-    --background-color: #ACE6EA;
+    --background-color: #ace6ea;
     --background-color-bg3: rgb(173, 231, 235, 0.3);
-    --button-color: #461DBA;
+    --button-color: #461dba;
     --hover-btn: #3f1aa5;
     --white-color: #ffffff;
-    --background-color-transparent: rgba(255, 255, 255, 0.90);
-    --main-fonts: 'Montserrat', sans-serif;
-    --second-fonts: 'Raleway', sans-serif;
-    --box-background: rgba(255, 255, 255, 0.60);
+    --background-color-transparent: rgba(255, 255, 255, 0.9);
+    --main-fonts: "Montserrat", sans-serif;
+    --second-fonts: "Raleway", sans-serif;
+    --box-background: rgba(255, 255, 255, 0.6);
     /* --color-ats-primary: #4527a0;
     --color-ats-secondary: #6a1b9a;
     --color-light: #fff;
@@ -61,7 +61,7 @@
 }
 
 .wrapper {
-    display:  flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -104,6 +104,11 @@ button {
     outline: none;
 }
 
+:focus {
+    /* color: red; */
+    text-decoration: underline #461dba;
+}
+
 a:focus,
 a:active {
     outline: none;
@@ -137,7 +142,12 @@ body {
     font-family: var(--main-fonts);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
     font-size: inherit;
@@ -177,9 +187,9 @@ picture {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 9999; 
-    display: none; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
 }
 .active-overlay {
     display: block;
@@ -319,7 +329,12 @@ picture {
 #clear-btn {
     background-color: var(--white-color);
     color: var(--button-color);
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 7px 0px rgba(0, 0, 0, 0.10), 0px 12px 12px 0px rgba(0, 0, 0, 0.09), 0px 27px 16px 0px rgba(0, 0, 0, 0.05), 0px 48px 19px 0px rgba(0, 0, 0, 0.01), 0px 75px 21px 0px rgba(0, 0, 0, 0.00);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+        0px 3px 7px 0px rgba(0, 0, 0, 0.1),
+        0px 12px 12px 0px rgba(0, 0, 0, 0.09),
+        0px 27px 16px 0px rgba(0, 0, 0, 0.05),
+        0px 48px 19px 0px rgba(0, 0, 0, 0.01),
+        0px 75px 21px 0px rgba(0, 0, 0, 0);
     margin: 0;
     padding: 21px 118.5px;
     width: 50%;
@@ -327,16 +342,7 @@ picture {
 #select-button {
     padding: 21px 152.4px;
     width: 50%;
-    
 }
-
-
-
-
-
-
-
-
 
 /* Сховати оригінальний чекбокс */
 .checkbox-container input,
@@ -346,7 +352,7 @@ picture {
 
 /* Створення стилізованого чекбокса */
 .checkbox-container .checkmark,
-.filter-container .checkmark{
+.filter-container .checkmark {
     display: flex;
     position: relative;
     width: 14px;
@@ -370,7 +376,7 @@ picture {
 
 /* Стилізація позначки "галочки" */
 .checkbox-container input:checked ~ .checkmark::after,
-.filter-container input:checked ~ .checkmark::after{
+.filter-container input:checked ~ .checkmark::after {
     content: "";
     position: absolute;
     top: 0;
@@ -383,17 +389,6 @@ picture {
     border-radius: 3px;
     background-position: center;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .popup {
     display: none;
@@ -426,7 +421,7 @@ picture {
 .popup-form input,
 .popup-form textarea {
     border-radius: 10px;
-    border: 1px solid rgba(85, 85, 85, 0.50);
+    border: 1px solid rgba(85, 85, 85, 0.5);
     width: 100%;
 }
 .popup-form textarea {
@@ -450,9 +445,6 @@ picture {
 .popup-close img {
     pointer-events: none;
 }
-
-
-
 
 .no-scroll-drop-popup {
     overflow: hidden;

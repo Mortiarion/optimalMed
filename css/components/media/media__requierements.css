@@ -91,7 +91,7 @@
 
 @media (min-width: 1440px) {
     .requierements .requierements__wrapper {
-        padding: 99px 211px 97px 110px;
+        padding: 99px 110px 97px 110px;
         grid-column-gap: 120px;
         grid-row-gap: 131px;
         margin: 0;
