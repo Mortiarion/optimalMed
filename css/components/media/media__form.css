@@ -46,7 +46,7 @@
         flex-direction: column;
     }
     .coll-us {
-        display: none;
+        /* display: none; */
     }
     .form__col-1,
     .form__col-2 {
@@ -59,7 +59,7 @@
     }
     .contacts .title,
     .form__col-2 .title {
-        text-align: left;
+        text-align: center;
         margin: 0 0 40px 0;
     }
     .dropdown-speciality-small-filter-main {
