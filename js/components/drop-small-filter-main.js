@@ -4,25 +4,30 @@ const dropdownSpecialitySmall = document.querySelector(
 const dropdownSpecialitySmallFilterMain = document.querySelector(
     ".dropdown-speciality-small-filter-main"
 );
-// const filter = document.querySelector(".dropdown-speciality-small-filter");
 const input =
     dropdownSpecialitySmallFilterMain.querySelector('input[type="text"]');
 const labels = dropdownSpecialitySmallFilterMain.querySelectorAll(
     ".checkbox-container-filter"
 );
-// console.log(input);
-// console.log(labels);
 const openDropdownSpecialitySmallFilterMain = () => {
     dropdownSpecialitySmallFilterMain.classList.add("filter-main-open");
 };
 const closeDropdownSpecialitySmallFilterMain = () => {
     dropdownSpecialitySmallFilterMain.classList.remove("filter-main-open");
 };
+const mainForm = document.querySelector(".main__form");
 
-dropdownSpecialitySmall.addEventListener("click", () => {
+dropdownSpecialitySmall.addEventListener("click", (event) => {
     dropdownSpecialitySmallFilterMain.classList.contains("filter-main-open")
         ? closeDropdownSpecialitySmallFilterMain()
         : openDropdownSpecialitySmallFilterMain();
+    event.stopPropagation();
+});
+
+document.addEventListener("click", (event) => {
+    if (!dropdownSpecialitySmallFilterMain.contains(event.target)) {
+        closeDropdownSpecialitySmallFilterMain();
+    }
 });
 
 input.addEventListener("input", function () {
@@ -51,7 +56,6 @@ function updateSelectedCount() {
 
     let numberSelected = document.querySelector(".number-selected-small");
     numberSelected.textContent = `вибрано ${selectedCount}`;
-    // numberSelected = selectedCount > 0 ? `вибрано ${selectedCount}` : "";
     if (selectedCount === 0) {
         numberSelected.textContent = "";
     }

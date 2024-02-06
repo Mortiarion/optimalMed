@@ -28,24 +28,21 @@ function validation(form) {
 
         if (input.dataset.required === "letter") {
             if (input.value === "") {
-                createError(input, "Вводите только буквы");
+                createError(input);
                 result = false;
             }
         }
 
         if (input.dataset.required === "number") {
-            if (!input.value.match(/^\d{10}$/)) {
-                createError(
-                    input,
-                    "Введите корректный номер телефона!(0687623820)"
-                );
+            if (!input.value.match(/^(?:\+380|0)?\d{9}$/)) {
+                createError(input);
                 result = false;
             }
         }
 
         if (input.dataset.required === "email") {
             if (!input.value.match(/^\S+@\S+\.\S+$/)) {
-                createError(input, "Введите корректный email (some@email.net)");
+                createError(input);
                 result = false;
             }
         }
@@ -54,7 +51,7 @@ function validation(form) {
             const numberSelected = document.querySelector(".number-selected");
 
             if (numberSelected.textContent === "") {
-                createError(input, "Выберите специализацию!");
+                createError(input);
                 result = false;
             }
         }
@@ -64,7 +61,7 @@ function validation(form) {
             );
 
             if (numberSelected.textContent === "") {
-                createError(input, "Выберите специализацию!");
+                createError(input);
                 result = false;
             }
         }

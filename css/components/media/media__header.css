@@ -113,6 +113,9 @@
     .header .container .navigation .navigation__list {
         display: none;
     }
+    .header .container .navigation .navigation__burger .navigation__list {
+        width: fit-content;
+    }
     .media__wrapper .title,
     .media__wrapper .text {
         /* display: flex; */
@@ -373,7 +376,4 @@
         right: auto;
         width: 1280px;
     }
-    /* .navigation__list {
-        margin-left: auto;
-    } */
 }

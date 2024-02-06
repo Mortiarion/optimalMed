@@ -15,6 +15,13 @@ popupSmall.addEventListener("click", () => {
     filter.classList.contains("open-popup-small")
         ? closePopupSmall()
         : openPopupSmall();
+    event.stopPropagation();
+});
+
+document.addEventListener("click", (event) => {
+    if (!popupSmall.contains(event.target)) {
+        closePopupSmall();
+    }
 });
 
 input.addEventListener("input", function () {
@@ -45,7 +52,6 @@ function updateSelectedCount() {
         ".number-selected-small-filter"
     );
     numberSelected.textContent = `вибрано ${selectedCount}`;
-    // numberSelected = selectedCount > 0 ? `вибрано ${selectedCount}` : "";
     if (selectedCount === 0) {
         numberSelected.textContent = "";
     }
@@ -55,11 +61,3 @@ labels.forEach(function (label) {
     const checkbox = label.querySelector('input[type="checkbox"]');
     checkbox.addEventListener("change", updateSelectedCount);
 });
-
-// document.addEventListener("click", (event) => {
-//     const isPopupSmall = popupSmall.contains(event.target);
-
-//     if (!isPopupSmall && filter.classList.contains("open-popup-small")) {
-//         closePopupSmall();
-//     }
-// });

@@ -9,21 +9,20 @@ document1.addEventListener("click", function () {
 });
 
 document2.addEventListener("click", function () {
-    downloadFile("file-upload", "Согласия.txt");
+    downloadFile("file-upload", "Согласия.pdf");
 });
 
 document3.addEventListener("click", function () {
-    downloadFile("file-upload", "Список документов для подачи 1.txt");
+    downloadFile("file-upload", "Список документов для подачи 1.pdf");
 });
 
 document4.addEventListener("click", function () {
-    downloadFile("file-upload", "Список документов для подачи 2.txt");
+    downloadFile("file-upload", "Список документов для подачи 2.pdf");
 });
 
 document5.addEventListener("click", function () {
-    downloadFile("file-upload", "Список документов для подачи 1.txt");
+    downloadFile("file-upload", "Список документов для подачи 1.pdf");
 });
-
 
 function downloadFile(filePath, fileName) {
     var downloadLink = document.createElement("a");
