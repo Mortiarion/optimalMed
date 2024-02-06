@@ -13,7 +13,7 @@ document2.addEventListener("click", function () {
 });
 
 document3.addEventListener("click", function () {
-    downloadFile("file-upload", "Список документов для подачи 1.txt");
+    downloadFile("file-upload", "Список документов для подачи 1.pdf");
 });
 
 document4.addEventListener("click", function () {

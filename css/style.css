@@ -28,8 +28,6 @@
 @import url(./components/article/media/media__article.css);
 @import url(./components/doctor__salary.css);
 @import url(./components/media/media__doctor-salary.css);
-/* @import url(./components/article-allergy/article-allergy.css); */
-/* @import url(./components/article-allergy/media/media__article-allergy.css); */
 
 * {
     box-sizing: border-box;
@@ -52,12 +50,7 @@
     --main-fonts: "Montserrat", sans-serif;
     --second-fonts: "Raleway", sans-serif;
     --box-background: rgba(255, 255, 255, 0.6);
-    /* --color-ats-primary: #4527a0;
-    --color-ats-secondary: #6a1b9a;
-    --color-light: #fff;
-    --color-1: #0f2027;
-    --color-2: #203a4300;
-    --color-3: #2c536400; */
+
 }
 
 .wrapper {
@@ -105,7 +98,6 @@ button {
 }
 
 :focus {
-    /* color: red; */
     text-decoration: underline #461dba;
 }
 
@@ -171,16 +163,7 @@ picture {
     display: flex;
     justify-content: center;
 }
-/* :focus {
-    outline: red solid;
-} */
-/* .custom-select:required {
-    background-color: red;
-    border: 5px;
-} */
-/* #selespecializationct:required:invalid {
-    color: red;
-} */
+
 .overlay {
     position: fixed;
     top: 0;
@@ -196,10 +179,7 @@ picture {
 }
 
 .dropdown-list {
-    /* max-width: 1200px; */
-    /* height: 300px; */
     position: fixed;
-    /* position: absolute; */
     background-color: var(--white-color);
     border-radius: 20px;
     z-index: 10000;
@@ -211,8 +191,8 @@ picture {
     display: none;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid rgba(85, 85, 85, 0.50); */
 }
+
 .active-dropdown-list {
     display: flex;
 }
@@ -227,24 +207,6 @@ picture {
     font-family: var(--main-fonts);
 }
 
-.selected-specializations {
-    /* position: relative; */
-    /* background-color: var(--white-color); */
-    /* border-radius: 10px; */
-    /* min-height: 54px; */
-    /* width: 100%; */
-    /* margin: 0 0 20px 0; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* padding: 0 20px; */
-    /* font-family: var(--second-fonts); */
-    /* font-size: 14px; */
-    /* line-height: 14px; */
-    /* cursor: pointer; */
-    /* border: 1px solid rgba(85, 85, 85, 0.50); */
-    /* gap: 10px; */
-    /* flex-wrap: wrap; */
-}
 
 .specialization-items input {
     margin: 0;
@@ -263,7 +225,6 @@ picture {
     flex-direction: column;
     width: 25%;
     white-space: nowrap;
-    /* gap: 16px; */
 }
 
 .item label,
@@ -280,10 +241,6 @@ picture {
     line-height: 32.2px;
 }
 
-/* .selected-specializations:after {
-    top: 25px;
-} */
-
 #select-button {
     margin: 0 auto;
 }
@@ -293,23 +250,9 @@ picture {
     top: -5%;
     right: -5%;
 }
+
 .close-dropdown img {
     pointer-events: none;
-}
-.checked-element {
-    /* border-radius: 10px; */
-    /* background-color: #EBFBFC; */
-    /* display: flex; */
-    /* padding: 10px; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* gap: 8px; */
-    /* white-space: nowrap; */
-    /* margin: 5px; */
-    /* color: var(--text-color-all); */
-    /* font-family: var(--second-fonts); */
-    /* font-size: 14px; */
-    /* line-height: 14px; */
 }
 
 .delete-btn {
@@ -323,7 +266,6 @@ picture {
 .dropdown-buttons {
     display: flex;
     gap: 20px;
-    /* width: 70%; */
 }
 
 #clear-btn {
@@ -344,13 +286,11 @@ picture {
     width: 50%;
 }
 
-/* Сховати оригінальний чекбокс */
 .checkbox-container input,
 .filter-container input {
     display: none;
 }
 
-/* Створення стилізованого чекбокса */
 .checkbox-container .checkmark,
 .filter-container .checkmark {
     display: flex;
@@ -361,7 +301,6 @@ picture {
     margin: auto 0px auto 0;
 }
 
-/* Стилізація вигляду "чекбокса" */
 .checkbox-container .checkmark::before,
 .filter-container .checkmark::before {
     content: "";
@@ -374,7 +313,6 @@ picture {
     border: 1px solid rgba(131, 131, 131, 1);
 }
 
-/* Стилізація позначки "галочки" */
 .checkbox-container input:checked ~ .checkmark::after,
 .filter-container input:checked ~ .checkmark::after {
     content: "";
@@ -406,18 +344,17 @@ picture {
 .active-popup {
     display: block;
 }
-.popup-container {
-    /* position: relative; */
-}
+
 .popup-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .popup-form input {
-    /* height: 64px; */
     padding: 19px 28px;
 }
+
 .popup-form input,
 .popup-form textarea {
     border-radius: 10px;
