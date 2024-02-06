@@ -5,7 +5,7 @@ const document4 = document.getElementById("document-4");
 const document5 = document.getElementById("document-5");
 
 document1.addEventListener("click", function () {
-    downloadFile("file-upload", "Информационная клаузула.txt");
+    downloadFile("file-upload", "Информационная клаузула.pdf");
 });
 
 document2.addEventListener("click", function () {
@@ -13,7 +13,7 @@ document2.addEventListener("click", function () {
 });
 
 document3.addEventListener("click", function () {
-    downloadFile("file-upload", "Список документов для подачи 1.pdf");
+    downloadFile("file-upload", "Список документов для подачи 1.txt");
 });
 
 document4.addEventListener("click", function () {
