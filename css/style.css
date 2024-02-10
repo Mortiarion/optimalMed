@@ -22,12 +22,13 @@
 @import url(./components/media/media__profession.css);
 @import url(./components/footer.css);
 @import url(./components/media/media__footer.css);
-@import url(./components/blog/header__blog.css);
-@import url(./components/blog/media/media__header-blog.css);
-@import url(./components/article/article.css);
-@import url(./components/article/media/media__article.css);
+/* @import url(./components/blog/header__blog.css); */
+/* @import url(./components/blog/media/media__header-blog.css); */
+/* @import url(./components/article/article.css); */
+/* @import url(./components/article/media/media__article.css); */
 @import url(./components/doctor__salary.css);
 @import url(./components/media/media__doctor-salary.css);
+@import url(./components/common-style-article.css);
 
 * {
     box-sizing: border-box;
@@ -317,7 +318,7 @@ picture {
     left: 0;
     width: 15px;
     height: 15px;
-    background-image: url("./../img/check-alt-svgrepo-com1.svg");
+    background-image: url("./../img/main-page-img/check.svg");
     background-repeat: no-repeat;
     background-color: rgba(15, 164, 174, 1);
     border-radius: 3px;

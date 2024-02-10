@@ -1,5 +1,9 @@
 .footer {
-    background: linear-gradient(180deg, rgba(172, 230, 234, 0) 0%, #ace6ea 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(172, 230, 234, 0) 0%,
+        #ace6ea 100%
+    );
 }
 .footer__wrapper {
     padding: 87px 67px 42px;
@@ -17,7 +21,7 @@
     font-family: var(--second-fonts);
     font-size: 14px;
     font-weight: 400;
-    line-height: 28px; 
+    line-height: 28px;
     letter-spacing: -0.28px;
     opacity: 0.5;
 }
@@ -34,7 +38,7 @@
     font-family: var(--second-fonts);
     font-size: 14px;
     font-weight: 400;
-    line-height: 28px; 
+    line-height: 28px;
     letter-spacing: -0.28px;
     margin: 0 0 20px 0;
 }
@@ -44,7 +48,7 @@
     width: 145px;
     font-family: var(--second-fonts);
     font-size: 14px;
-    line-height: 28px; 
+    line-height: 28px;
     letter-spacing: -0.28px;
 }
 
@@ -53,7 +57,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; 
+    line-height: 28px;
     letter-spacing: -0.28px;
 }
 
@@ -68,20 +72,11 @@
     width: 227px;
 }
 
-.footer__col-2, 
-.footer__col-3, 
+.footer__col-2,
+.footer__col-3,
 .footer__col-4 {
     display: none;
 }
-
-/* #document-1,
-#document-2,
-#document-3,
-#document-4,
-#document-5 {
-    text-decoration: none;
-    transition: text-decoration .3s ease-in-out;
-} */
 
 #document-1:hover,
 #document-2:hover,

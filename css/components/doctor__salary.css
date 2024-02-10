@@ -1,13 +1,11 @@
-.doctor__salary {
-}
-.container {
-}
 .doctor__salary-container {
     margin: 0 0 40px 0;
 }
+
 .doctor__salary-wrapper {
     margin: 0 0 40px 0;
 }
+
 .doctor__salary-title {
     color: var(--text-color-all);
     font-size: 30px;
@@ -15,15 +13,18 @@
     line-height: 100%;
     margin: 0 0 24px 0;
 }
+
 .doctor__salary-title span {
     color: var(--title-color-second);
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
 }
+
 .doctor__salary-img {
     margin: 0 0 20px 0;
 }
+
 .doctor__salary-text {
     color: var(--text-color-all);
     font-family: var(--second-fonts);
@@ -32,11 +33,13 @@
     line-height: 21px;
     margin: 0 0 10px 0;
 }
+
 .doctor__salary-footer {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .doctor__salary-footer p {
     color: var(--title-color-second);
     font-size: 14px;
@@ -44,10 +47,11 @@
     line-height: normal;
     letter-spacing: -0.28px;
 }
+
 .link {
     height: 40px;
-    /* overflow: hidden; */
 }
+
 .link svg {
     fill: red;
 }
