@@ -29,6 +29,7 @@
 @import url(./components/doctor__salary.css);
 @import url(./components/media/media__doctor-salary.css);
 @import url(./components/common-style-article.css);
+@import url(./components/media/media-common-style-article.css);
 
 * {
     box-sizing: border-box;

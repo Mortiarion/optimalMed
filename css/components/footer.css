@@ -11,6 +11,12 @@
 }
 .footer__wrapper a {
     color: var(--text-color-all);
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    display: flex;
+    gap: 25px;
 }
 
 .footer .container {

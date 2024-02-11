@@ -168,7 +168,6 @@
         margin: 0 0 60px 0;
     }
     .header .container {
-        /* max-width: 1024px; */
         margin: 20px 20px 0 20px;
         padding: 20px 32px 0 34px;
         border-radius: 20px;
@@ -276,7 +275,6 @@
         font-weight: 700;
         line-height: 28px;
         letter-spacing: -0.28px;
-        /* margin-left: auto; */
     }
     .media__wrapper .title {
         width: 100%;
@@ -303,7 +301,6 @@
     }
     .header .container .navigation .navigation__list .navigation__item {
         margin: 0;
-        /* display: flex; */
     }
     .header .container .navigation .navigation__list .navigation__item a:after {
         content: "";
@@ -337,7 +334,7 @@
         margin-left: 37px;
     }
     .header .container {
-        max-width: 1400px;
+        width: 1400px;
         margin: 20px auto 0 auto;
         padding: 20px 59px 0 61px;
         position: relative;

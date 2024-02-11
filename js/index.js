@@ -73,15 +73,12 @@ const checkBoxContainers = document.querySelectorAll(".checkbox-container");
 const selectedItems = [];
 
 const clearCheckbox = () => {
-    const clearButton = document.getElementById("clear-btn");
-    clearButton.addEventListener("click", () => {
-        checkBoxContainers.forEach((container) => {
-            const checkBox = container.querySelector("input[type='checkbox']");
-            checkBox.checked = false;
-        });
-        selectedItems.length = 0;
-        updateSelectedCount();
+    checkBoxContainers.forEach((container) => {
+        const checkBox = container.querySelector("input[type='checkbox']");
+        checkBox.checked = false;
     });
+    selectedItems.length = 0;
+    updateSelectedCount();
 };
 
 checkBoxContainers.forEach((container) => {
@@ -101,20 +98,15 @@ checkBoxContainers.forEach((container) => {
 });
 
 const selectedButton = () => {
-    const selectButton = document.getElementById("select-button");
+    const overlay = document.querySelector(".overlay");
 
-    selectButton.addEventListener("click", () => {
-        const dropdownList = document.querySelector(".dropdown-list");
-        const overlay = document.querySelector(".overlay");
+    dropdownList.classList.remove("active-dropdown-list");
+    overlay.classList.remove("active-overlay");
 
-        dropdownList.classList.remove("active-dropdown-list");
-        overlay.classList.remove("active-overlay");
-
-        if (document.body.classList.contains("no-scroll-drop-popup")) {
-            disabledOrAnablesSroll();
-        }
-        updateSelectedCount();
-    });
+    if (document.body.classList.contains("no-scroll-drop-popup")) {
+        disabledOrAnablesSroll();
+    }
+    updateSelectedCount();
 };
 
 const updateSelectedCount = () => {
@@ -146,9 +138,8 @@ function stickyMenu() {
 
 /**--------------------------------------------- */
 
+const navigationBurger = document.querySelector(".navigation__burger");
 const openBurgerMenu = () => {
-    const navigationBurger = document.querySelector(".navigation__burger");
-
     navigationBurger.classList.add("active");
     document.body.classList.add("no-scroll-drop-popup");
 };
@@ -159,7 +150,6 @@ const closeBurgerMenu = () => {
     navigationBurger.classList.remove("active");
     document.body.classList.remove("no-scroll-drop-popup");
 };
-const navigationBurger = document.querySelector(".navigation__burger");
 
 const burgerItemList = navigationBurger.querySelectorAll(".navigation__item");
 

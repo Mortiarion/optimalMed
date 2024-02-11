@@ -19,7 +19,7 @@
     .salary-img-two {
         display: block;
         height: 100%;
-        width: 212px;
+        max-width: 212px;
     }
     .salary__media-wrapper {
         display: flex;
