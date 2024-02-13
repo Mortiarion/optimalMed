@@ -321,7 +321,7 @@ const toggleDropdownSpecialitySmallFilterMain = () => {
 
 const validationMain = () => {
     function validation(form) {
-        console.log(form);
+        // console.log(form);
         function removeError(input) {
             const parent = input.parentNode;
 
@@ -400,23 +400,18 @@ const validationMain = () => {
         return result;
     }
 
-    let eventHandlerAdded = false;
+    document
+        .querySelector(".main__form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
 
-    if (!eventHandlerAdded) {
-        document
-            .querySelector(".main__form")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
+            if (validation(this) == true) {
+                alert("Форма провірена успішно!");
 
-                if (validation(this) == true) {
-                    alert("Форма провірена успішно!");
-
-                    return false;
-                }
-                console.log(validation(this) == true);
-            });
-        eventHandlerAdded = true;
-    }
+                return false;
+            }
+            console.log(validation(this) == true);
+        });
 };
 
 /**--------------------------------------------- */
