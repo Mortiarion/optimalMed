@@ -318,8 +318,10 @@ const toggleDropdownSpecialitySmallFilterMain = () => {
 };
 
 /**--------------------------------------------- */
+
 const validationMain = () => {
     function validation(form) {
+        console.log(form);
         function removeError(input) {
             const parent = input.parentNode;
 
@@ -397,17 +399,24 @@ const validationMain = () => {
 
         return result;
     }
-    document
-        .querySelector(".main__form")
-        .addEventListener("submit", function (event) {
-            event.preventDefault();
 
-            if (validation(this) == true) {
-                alert("Форма провірена успішно!");
+    let eventHandlerAdded = false;
 
-                return false;
-            }
-        });
+    if (!eventHandlerAdded) {
+        document
+            .querySelector(".main__form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                if (validation(this) == true) {
+                    alert("Форма провірена успішно!");
+
+                    return false;
+                }
+                console.log(validation(this) == true);
+            });
+        eventHandlerAdded = true;
+    }
 };
 
 /**--------------------------------------------- */
@@ -448,7 +457,7 @@ const validationPopup = () => {
             }
 
             if (input.dataset.required === "number") {
-                if (!input.value.match(/^\d{10}$/)) {
+                if (!input.value.match(/^(?:\+380|0)?\d{9}$/)) {
                     createError(input);
                     result = false;
                 }

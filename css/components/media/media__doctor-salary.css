@@ -9,9 +9,7 @@
         display: none;
     }
 }
-/* @media (min-width: 375px) {
-    
-} */
+
 @media (min-width: 768px) {
     .salary-img-one {
         display: none;
@@ -27,9 +25,6 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         gap: 30px;
-    }
-    .salary__media-box {
-        /* width: 400px; */
     }
     .doctor__salary-img {
         margin: 0;
@@ -63,6 +58,7 @@
         margin: 0 0 20px 0;
     }
 }
+
 @media (min-width: 1024px) {
     .doctor__salary .container {
         padding: 0 57px 0 52px;
@@ -133,13 +129,7 @@
         max-width: 1440px;
         padding: 0 130px;
     }
-    .salary__media-wrapper {
-        /* margin: 0 0 80px 0; */
-    }
     .doctor__salary-img {
         margin: 0;
     }
-    /* .doctor__salary-img img {
-        height: 380px;
-    } */
 }

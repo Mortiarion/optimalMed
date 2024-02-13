@@ -22,10 +22,6 @@
 @import url(./components/media/media__profession.css);
 @import url(./components/footer.css);
 @import url(./components/media/media__footer.css);
-/* @import url(./components/blog/header__blog.css); */
-/* @import url(./components/blog/media/media__header-blog.css); */
-/* @import url(./components/article/article.css); */
-/* @import url(./components/article/media/media__article.css); */
 @import url(./components/doctor__salary.css);
 @import url(./components/media/media__doctor-salary.css);
 @import url(./components/common-style-article.css);
@@ -44,14 +40,15 @@
     --bg-testimonials: #ace6ea;
     --subtitle-color: #555555;
     --background-color: #ace6ea;
-    --background-color-bg3: rgb(173, 231, 235, 0.3);
+    --background-color-bg3: #ade7eb4d;
     --button-color: #461dba;
     --hover-btn: #3f1aa5;
     --white-color: #ffffff;
-    --background-color-transparent: rgba(255, 255, 255, 0.9);
+    --background-color-transparent: #ffffffe6;
     --main-fonts: "Montserrat", sans-serif;
     --second-fonts: "Raleway", sans-serif;
-    --box-background: rgba(255, 255, 255, 0.6);
+    --box-background: #ffffff99;
+    --ovelay: #00000080;
 }
 
 .wrapper {
@@ -106,7 +103,7 @@ button {
 }
 
 :focus {
-    text-decoration: underline #461dba;
+    text-decoration: underline var(--button-color);
 }
 
 a:focus,
@@ -153,14 +150,6 @@ h6 {
     font-size: inherit;
 }
 
-/* .valid:focus {
-    outline: green solid;
-}
-
-.invalid:focus {
-    outline: red solid;
-} */
-
 iframe {
     border-radius: 10px;
     width: 100%;
@@ -178,7 +167,7 @@ picture {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--ovelay);
     z-index: 9999;
     display: none;
 }
@@ -360,7 +349,7 @@ picture {
 .popup-form input,
 .popup-form textarea {
     border-radius: 10px;
-    border: 1px solid rgba(85, 85, 85, 0.5);
+    border: 1px solid #55555580;
     width: 100%;
 }
 .popup-form textarea {
