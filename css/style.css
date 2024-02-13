@@ -49,6 +49,7 @@
     --second-fonts: "Raleway", sans-serif;
     --box-background: #ffffff99;
     --ovelay: #00000080;
+    --checkmark: #838383;
 }
 
 .wrapper {
@@ -197,7 +198,7 @@ picture {
 
 .dropdown-title {
     margin: 0 0 20px 0;
-    color: #000;
+    color: var(--text-color-all);
     text-align: center;
     font-size: 38px;
     font-weight: 600;
@@ -297,7 +298,7 @@ picture {
     width: 13px;
     height: 13px;
     border-radius: 3px;
-    border: 1px solid rgba(131, 131, 131, 1);
+    border: 1px solid #838383;
 }
 
 .checkbox-container input:checked ~ .checkmark::after,
@@ -317,9 +318,7 @@ picture {
 
 .popup {
     display: none;
-    /* width: clamp(340px, 90%, 780px); */
-    /* padding: clamp(10px, 20px, 30px) */
-    /* width: 780px; */
+
     width: 340px;
     border-radius: 20px;
     background-color: var(--white-color);
@@ -343,7 +342,6 @@ picture {
 
 .popup-form input {
     padding: 19px 28px;
-    /* position: relative; */
 }
 
 .popup-form input,
@@ -388,12 +386,6 @@ picture {
     .popup-btn.btn {
         width: 320px;
     }
-    /* .form-popup-box svg {
-        right: -260px;
-    }
-    .main-form-box svg {
-        right: -80px;
-    } */
     .dropdown-speciality-small-filter {
         width: 508px;
     }
@@ -407,12 +399,6 @@ picture {
     .popup-btn.btn {
         width: 380px;
     }
-    /* .form-popup-box svg {
-        right: -260px;
-    }
-    .main-form-box svg {
-        right: -80px;
-    } */
     .dropdown-speciality-small-filter {
         width: 580px;
     }

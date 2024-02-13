@@ -549,7 +549,7 @@
 							</div>
 							<div class="form__col-2">
 								<h3 class="title">Оставте заявку</h3>
-								<form class="main__form">
+								<form action="" id="main-form" class="main__form">
                                     <div class="main-form-box">
                                         <input data-required ="letter" type="text" name="name" placeholder="Имя *">
                                     </div>
@@ -559,7 +559,7 @@
                                     <div class="main-form-box">
                                         <input data-required="email" type="email" name="email" placeholder="Email *">
                                     </div>
-                                    <div class="main-form-box drop-big">
+                                    <div class="main-form-box drop-big" >
                                         <input type="button" value=" " data-required="select" onclick="openDropSpecialality()" id="dropdown-speciality" class="dropdown-speciality">
                                             <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M6.6286 7.06466C6.22861 7.54961 5.48567 7.54961 5.08569 7.06466L1.02083 2.13629C0.482874 1.48405 0.946818 0.5 1.79229 0.5H9.922C10.7675 0.5 11.2314 1.48404 10.6935 2.13628L6.6286 7.06466Z" fill="#0FA4AE"/>
@@ -852,7 +852,7 @@
                                         </div>
                                     </div>
                                     <textarea class="arena-text" name="area" id="area" cols="30" rows="10" placeholder="Впишите текст сообщения..."></textarea>
-									<button type="submit" class="form-btn btn" onclick="validationMain()">Отправлять</button>
+									<button type="submit" class="form-btn btn" >Отправлять</button>
 								</form>
 							</div>
 						</div>
@@ -1259,7 +1259,7 @@
         </div>
         <div class="popup">
             <div class="popup-container">
-                <form class="popup-form">
+                <form action="" class="popup-form">
                     <button type="button" class="popup-close" onclick="closePopup()">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1245_8901)">
@@ -1572,7 +1572,7 @@
                             </div>
                         </div>
                     <textarea name="arena" cols="30" rows="7" placeholder="Впишите текст сообщения..."></textarea>
-                    <button type="submit" onclick="validationPopup()" class="popup-btn btn">Отправить</button>
+                    <button type="submit" class="popup-btn btn">Отправить</button>
                 </form>
             </div>
         </div>
