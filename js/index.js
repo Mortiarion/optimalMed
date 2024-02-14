@@ -414,7 +414,6 @@ const toggleDropdownSpecialitySmallFilterMain = () => {
 /**--------------------------------------------- */
 
 function validation(form) {
-
     function removeError(input) {
         const parent = input.parentNode;
 
@@ -465,6 +464,12 @@ function validation(form) {
         if (input.dataset.required === "select") {
             const numberSelected = document.querySelector(".number-selected");
 
+            if (window.innerWidth >= 320 && window.innerWidth <= 1024) {
+                if (window.getComputedStyle(input).display === "none") {
+                    continue; // Пропускаем этот элемент, если он скрыт
+                }
+            }
+
             if (numberSelected.textContent === "") {
                 createError(input);
                 result = false;
@@ -474,6 +479,12 @@ function validation(form) {
             const numberSelected = document.querySelector(
                 ".number-selected-small"
             );
+
+            if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+                if (window.getComputedStyle(input).display === "none") {
+                    continue; // Пропускаем этот элемент, если он скрыт
+                }
+            }
 
             if (numberSelected.textContent === "") {
                 createError(input);
@@ -506,86 +517,86 @@ document
 /**--------------------------------------------- */
 
 // const validationPopup = () => {
-    function validationFormPopup(form) {
-        function removeError(input) {
-            const parent = input.parentNode;
+function validationFormPopup(form) {
+    function removeError(input) {
+        const parent = input.parentNode;
 
-            if (parent.classList.contains("error")) {
-                parent.querySelector(".error-label").remove();
-                parent.classList.remove("error");
-            }
+        if (parent.classList.contains("error")) {
+            parent.querySelector(".error-label").remove();
+            parent.classList.remove("error");
         }
-
-        function createError(input) {
-            const parent = input.parentNode;
-            const errorLabel = document.createElement("label");
-
-            errorLabel.classList.add("error-label");
-            parent.classList.add("error");
-
-            parent.append(errorLabel);
-        }
-
-        let result = true;
-
-        const allInputs = form.querySelectorAll("input");
-
-        for (const input of allInputs) {
-            removeError(input);
-
-            if (input.dataset.required === "letter") {
-                if (input.value === "") {
-                    createError(input);
-                    result = false;
-                }
-            }
-
-            if (input.dataset.required === "number") {
-                if (!input.value.match(/^(?:\+380|0)?\d{9}$/)) {
-                    createError(input);
-                    result = false;
-                }
-            }
-
-            if (input.dataset.required === "email") {
-                if (!input.value.match(/^\S+@\S+\.\S+$/)) {
-                    createError(input);
-                    result = false;
-                }
-            }
-
-            if (input.dataset.required === "select") {
-                const numberSelected = document.querySelector(
-                    ".number-selected-small-filter"
-                );
-
-                if (numberSelected.textContent === "") {
-                    createError(input);
-                    result = false;
-                }
-            }
-
-            if (!result) {
-                const firstErrorInput =
-                    form.querySelector(".error-label").previousElementSibling;
-                firstErrorInput.focus();
-            }
-        }
-
-        return result;
     }
 
-    document
-        .querySelector(".popup-form")
-        .addEventListener("submit", function (event) {
-            event.preventDefault();
+    function createError(input) {
+        const parent = input.parentNode;
+        const errorLabel = document.createElement("label");
 
-            if (validationFormPopup(this) == true) {
-                alert("Форма проверена успешно!");
+        errorLabel.classList.add("error-label");
+        parent.classList.add("error");
 
-                return false;
+        parent.append(errorLabel);
+    }
+
+    let result = true;
+
+    const allInputs = form.querySelectorAll("input");
+
+    for (const input of allInputs) {
+        removeError(input);
+
+        if (input.dataset.required === "letter") {
+            if (input.value === "") {
+                createError(input);
+                result = false;
             }
-        });
+        }
+
+        if (input.dataset.required === "number") {
+            if (!input.value.match(/^(?:\+380|0)?\d{9}$/)) {
+                createError(input);
+                result = false;
+            }
+        }
+
+        if (input.dataset.required === "email") {
+            if (!input.value.match(/^\S+@\S+\.\S+$/)) {
+                createError(input);
+                result = false;
+            }
+        }
+
+        if (input.dataset.required === "select") {
+            const numberSelected = document.querySelector(
+                ".number-selected-small-filter"
+            );
+
+            if (numberSelected.textContent === "") {
+                createError(input);
+                result = false;
+            }
+        }
+
+        if (!result) {
+            const firstErrorInput =
+                form.querySelector(".error-label").previousElementSibling;
+            firstErrorInput.focus();
+        }
+    }
+
+    return result;
+}
+
+document
+    .querySelector(".popup-form")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (validationFormPopup(this) == true) {
+            alert("Форма проверена успешно!");
+
+            return false;
+        }
+    });
 // };
 
 /**--------------------------------------------- */

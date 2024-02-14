@@ -1,9 +1,10 @@
 @media (min-width: 320px) {
-    .selected-label,
-    .main-form-box.drop-big {
+
+    .main-form-box.drop-big,
+    .dropdown-speciality {
         display: none;
     }
-    main-form-box drop-big .dropdown-speciality-small {
+    .main-form-box .drop-big .dropdown-speciality-small {
         display: flex;
     }
 }
@@ -121,13 +122,8 @@
         display: flex;
         width: 100%;
     }
+    .main-form-box.drop-small,
     .dropdown-speciality-small {
         display: none;
     }
-    .main-form-box.drop-small {
-        display: none;
-    }
-    /* .dropdown-speciality-small-filter-main {
-        width: 422px;
-    } */
 }
