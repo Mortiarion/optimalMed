@@ -1,5 +1,4 @@
 @media (min-width: 320px) {
-
     .main-form-box.drop-big,
     .dropdown-speciality {
         display: none;
@@ -66,7 +65,6 @@
     .dropdown-speciality-small-filter-main {
         top: 365px;
     }
- 
 }
 
 @media (min-width: 1024px) {
@@ -125,5 +123,9 @@
     .main-form-box.drop-small,
     .dropdown-speciality-small {
         display: none;
+    }
+    .main-form-box.drop-big,
+    .dropdown-speciality {
+        display: flex;
     }
 }

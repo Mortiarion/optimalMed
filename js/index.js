@@ -466,7 +466,7 @@ function validation(form) {
 
             if (window.innerWidth >= 320 && window.innerWidth <= 1024) {
                 if (window.getComputedStyle(input).display === "none") {
-                    continue; // Пропускаем этот элемент, если он скрыт
+                    continue; 
                 }
             }
 
@@ -482,7 +482,7 @@ function validation(form) {
 
             if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
                 if (window.getComputedStyle(input).display === "none") {
-                    continue; // Пропускаем этот элемент, если он скрыт
+                    continue; 
                 }
             }
 
