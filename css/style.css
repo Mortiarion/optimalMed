@@ -1743,6 +1743,9 @@ picture {
     .main-form-box .drop-big .dropdown-speciality-small {
         display: flex;
     }
+    .header__article {
+        margin: 0;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1796,6 +1799,15 @@ picture {
         background-image: url("./../../../img/doctor-women.png");
         background-repeat: no-repeat;
         background-position: 70% 100%;
+    }
+    .header .article__container {
+        background-image: url(./../../img/article/header-article-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 120px;
+        height: 180px;
+        padding: 20px 30px 0;
     }
     .badge {
         width: 340px;
@@ -2234,13 +2246,22 @@ picture {
     .article .footer .container {
         padding: 0;
     }
+
     .header .article__container {
+        background-image: url(./../../img/article/header-article-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 120px;
         height: 180px;
         padding: 20px 30px 0;
     }
     .header__article .sticky {
         left: 40px;
         right: 40px;
+    }
+    .header__article {
+        margin: 0;
     }
 }
 
@@ -2725,6 +2746,16 @@ picture {
     .form .container {
         margin: 0;
     }
+    .header .article__container {
+        background-image: url(./../../img/article/header-article-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 120px;
+        height: 200px;
+        padding: 20px 30px 0;
+        margin-bottom: 10px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -2976,5 +3007,15 @@ picture {
     }
     .flex-box {
         justify-content: space-between;
+    }
+    .header .article__container {
+        background-image: url(./../../img/article/header-article-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 120px;
+        height: 180px;
+        padding: 20px 30px 0;
+        height: 300px;
     }
 }

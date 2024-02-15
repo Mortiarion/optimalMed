@@ -461,12 +461,12 @@ function validation(form) {
             }
         }
 
+        let container = document.querySelector(".container");
         if (input.dataset.required === "select") {
             const numberSelected = document.querySelector(".number-selected");
-
-            if (window.innerWidth >= 320 && window.innerWidth <= 1024) {
+            if (container.offsetWidth >= 320 && container.offsetWidth <= 1024) {
                 if (window.getComputedStyle(input).display === "none") {
-                    continue; 
+                    continue;
                 }
             }
 
@@ -480,9 +480,12 @@ function validation(form) {
                 ".number-selected-small"
             );
 
-            if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+            if (
+                container.offsetWidth >= 1024 &&
+                container.offsetWidth <= 1440
+            ) {
                 if (window.getComputedStyle(input).display === "none") {
-                    continue; 
+                    continue;
                 }
             }
 
@@ -502,21 +505,38 @@ function validation(form) {
     return result;
 }
 
-document
-    .getElementById("main-form")
-    .addEventListener("submit", function (event) {
-        event.preventDefault();
+function validationMain() {
+    document
+        .getElementById("main-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        if (validation(this) == true) {
-            alert("Форма провірена успішно!");
+            if (validation(this) == true) {
+                alert("Форма провірена успішно!");
 
-            return false;
-        }
-    });
+                this.reset();
+
+                if (
+                    (numberSelected =
+                        document.querySelector(".number-selected"))
+                ) {
+                    numberSelected.textContent = "";
+                }
+
+                if (
+                    (numberSelected = document.querySelector(
+                        ".number-selected-small"
+                    ))
+                ) {
+                    numberSelected.textContent = "";
+                }
+                return false;
+            }
+        });
+}
 
 /**--------------------------------------------- */
 
-// const validationPopup = () => {
 function validationFormPopup(form) {
     function removeError(input) {
         const parent = input.parentNode;
@@ -586,18 +606,39 @@ function validationFormPopup(form) {
     return result;
 }
 
-document
-    .querySelector(".popup-form")
-    .addEventListener("submit", function (event) {
-        event.preventDefault();
+function validationPopup() {
+    document
+        .querySelector(".popup-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        if (validationFormPopup(this) == true) {
-            alert("Форма проверена успешно!");
+            if (validationFormPopup(this) == true) {
+                alert("Форма проверена успешно!");
 
-            return false;
-        }
-    });
-// };
+                this.reset();
+
+                if (
+                    (numberSelected = document.querySelector(
+                        ".number-selected-small-filter"
+                    ))
+                ) {
+                    numberSelected.textContent = "";
+                }
+
+                const inputFields = this.querySelectorAll("input");
+                inputFields.forEach((input) => {
+                    removeError(input);
+                });
+
+                // Удаление класса error также может понадобиться для других элементов формы
+                // Например, для .number-selected-small-filter
+                const numberSelected = document.querySelector(".number-selected-small-filter");
+                removeError(numberSelected);
+
+                return false;
+            }
+        });
+}
 
 /**--------------------------------------------- */
 
