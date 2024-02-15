@@ -75,7 +75,9 @@ html {
 }
 
 body {
-    margin: 0;
+    /* margin: 0; */
+    font-family: var(--main-fonts);
+
 }
 
 main {
@@ -315,10 +317,6 @@ button:focus {
 textarea {
     resize: none;
     width: 100%;
-}
-
-body {
-    font-family: var(--main-fonts);
 }
 
 h1,
@@ -3009,7 +3007,7 @@ picture {
         justify-content: space-between;
     }
     .header .article__container {
-        background-image: url(./../../img/article/header-article-bg.svg);
+        background-image: url(./../img/article/header-article-bg.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
