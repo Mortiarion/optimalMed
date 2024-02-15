@@ -530,6 +530,13 @@ function validationMain() {
                 ) {
                     numberSelected.textContent = "";
                 }
+                const allFormPopupBox =
+                    this.querySelectorAll(".form-popup-box");
+                allFormPopupBox.forEach((box) => {
+                    if (box.classList.contains("error")) {
+                        box.classList.remove("error");
+                    }
+                });
                 return false;
             }
         });
@@ -615,8 +622,6 @@ function validationPopup() {
             if (validationFormPopup(this) == true) {
                 alert("Форма проверена успешно!");
 
-                this.reset();
-
                 if (
                     (numberSelected = document.querySelector(
                         ".number-selected-small-filter"
@@ -625,21 +630,26 @@ function validationPopup() {
                     numberSelected.textContent = "";
                 }
 
-                const inputFields = this.querySelectorAll("input");
-                inputFields.forEach((input) => {
-                    removeError(input);
+                const allCheckBoxes = this.querySelectorAll(
+                    "input[type='checkbox']"
+                );
+                allCheckBoxes.forEach((checkbox) => {
+                    checkbox.checked = false;
                 });
 
-                // Удаление класса error также может понадобиться для других элементов формы
-                // Например, для .number-selected-small-filter
-                const numberSelected = document.querySelector(".number-selected-small-filter");
-                removeError(numberSelected);
+                const allFormPopupBox =
+                    this.querySelectorAll(".form-popup-box");
+                allFormPopupBox.forEach((box) => {
+                    if (box.classList.contains("error")) {
+                        box.classList.remove("error");
+                    }
+                });
+                // this.reset();
 
                 return false;
             }
         });
 }
-
 /**--------------------------------------------- */
 
 const languageMenu = document.querySelector(".language__menu");
