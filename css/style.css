@@ -1796,7 +1796,7 @@ picture {
         align-items: center;
     }
     .header .container {
-        background-image: url("./../../../img/doctor-women.png");
+        background-image: url("./../img/doctor-women.png");
         background-repeat: no-repeat;
         background-position: 70% 100%;
     }
@@ -1876,7 +1876,7 @@ picture {
         margin-left: 0;
     }
     .header .container {
-        background-image: url("./../../../img/doctor-women-768.png");
+        background-image: url("./../img/doctor-women-768.png");
         background-repeat: no-repeat;
         background-position: 100% 100%;
         background-size: 300px;
@@ -2008,7 +2008,7 @@ picture {
         grid-column-gap: 40px;
         grid-row-gap: 60px;
         align-items: end;
-        background-image: url(./../../../img/doctor-men-1024.png);
+        background-image: url(./../img/doctor-men-1024.png);
         background-size: 232px 249px;
         margin: 0 0 70px 0;
     }
@@ -2274,7 +2274,7 @@ picture {
         margin: 20px 20px 0 20px;
         padding: 20px 32px 0 34px;
         border-radius: 20px;
-        background-image: url("./../../../img/doctors-women-1.png");
+        background-image: url("./../img/doctors-women-1.png");
         background-repeat: no-repeat;
         background-size: 443px, 650px;
         background-position: 103% 100%;
@@ -2467,7 +2467,7 @@ picture {
         grid-column-gap: 39px;
         grid-row-gap: 119px;
         align-items: end;
-        background-image: url("./../../../img/doctor-men-1024.png");
+        background-image: url("./../img/doctor-men-1024.png");
         background-size: 301px 324px;
         margin: 0 0 60px 0;
     }
