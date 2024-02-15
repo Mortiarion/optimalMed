@@ -1344,7 +1344,7 @@ picture {
 
 .breadcrumbs__list li + li::before {
     content: "";
-    background-image: url("./../../img/article/skobka.svg");
+    background-image: url("./../img/article/skobka.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 6px;
