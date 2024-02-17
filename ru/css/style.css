@@ -1313,7 +1313,7 @@ picture {
 /*-----------------------COMMON-STYLE-ARTICLE*/
 
 .header .article__container {
-    background-image: url("./../../img/article/header-article-bg.svg");
+    background-image: url("./../img/article/header-article-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1798,7 +1798,7 @@ picture {
         background-position: 70% 100%;
     }
     .header .article__container {
-        background-image: url(./../../img/article/header-article-bg.svg);
+        background-image: url("./../img/article/header-article-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -2248,7 +2248,7 @@ picture {
     }
 
     .header .article__container {
-        background-image: url(./../../img/article/header-article-bg.svg);
+        background-image: url("./../img/article/header-article-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -2747,7 +2747,7 @@ picture {
         margin: 0;
     }
     .header .article__container {
-        background-image: url(./../../img/article/header-article-bg.svg);
+        background-image: url("./../img/article/header-article-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -3009,7 +3009,7 @@ picture {
         justify-content: space-between;
     }
     .header .article__container {
-        background-image: url(./../img/article/header-article-bg.svg);
+        background-image: url("./../img/article/header-article-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
